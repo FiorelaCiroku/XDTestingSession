@@ -49,6 +49,7 @@ jobs:
             echo 'This folder stores the documentation of each test case that has been executed. You can browse the documentation and check a certain execution based on the requirement's ID.' > README.md
             cd ..
             cd SPARQLUnitTest
+            echo 'This folder stores the test cases and toy datasets that are created for the verification of competency questions. ' > README.md
             mkdir CQTestCase
             mkdir CQDataSet
             cd CQTestCase 
@@ -61,6 +62,7 @@ jobs:
             cd ..
             cd ..
             cd InferenceVerificationTest
+            echo 'This folder stores the test cases and toy datasets that are created for the verification of inference. ' > README.md
             mkdir IVTestCase
             mkdir IVDataSet
             cd IVTestCase
@@ -73,6 +75,7 @@ jobs:
             cd ..
             cd ..
             cd ErrorProvocationTest
+            echo 'This folder stores the test cases and toy datasets that are created for the provocation of errors. ' > README.md
             mkdir EPTestCase
             mkdir EPDataSet
             cd EPTestCase
