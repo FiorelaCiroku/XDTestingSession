@@ -46,44 +46,35 @@ jobs:
             touch $line.owl
             done < UserInput.txt
             cd TestDocumentation
-            echo 'This folder stores the documentation of each test case that has been executed. You can browse the documentation and check a certain execution based on the requirement's ID.' > README.md
+            touch README.md
             cd ..
             cd SPARQLUnitTest
-            echo 'This folder stores the test cases and toy datasets that are created for the verification of competency questions. ' > README.md
             mkdir CQTestCase
             mkdir CQDataSet
             cd CQTestCase 
-            echo 'This folder stores all the Competency Question Verification test cases that are created either by the automation or by the ontology engineer. You search for a specific test case based on the requirement's ID.' > README.md
             touch CQTestCase.ttl
             cd ..
             cd CQDataSet 
-            echo 'This folder stores all the toy dataset that are created for the Competency Question Verification test cases. You search for a specific toy dataset based on the requirement's ID.' > README.md
             touch CQDataSet.ttl
             cd ..
             cd ..
             cd InferenceVerificationTest
-            echo 'This folder stores the test cases and toy datasets that are created for the verification of inference. ' > README.md
             mkdir IVTestCase
             mkdir IVDataSet
             cd IVTestCase
             touch IVTestCase.ttl
-            echo 'This folder stores all the Inference Verification test cases that are created either by the automation or by the ontology engineer. You search for a specific test case based on the requirement's ID.' > README.md
             cd ..
             cd IVDataSet
-            echo 'This folder stores all the toy dataset that are created for the Inference Verification test cases. You search for a specific toy dataset based on the requirement's ID.' > README.md
             touch IVDataSet.ttl
             cd ..
             cd ..
             cd ErrorProvocationTest
-            echo 'This folder stores the test cases and toy datasets that are created for the provocation of errors. ' > README.md
             mkdir EPTestCase
             mkdir EPDataSet
             cd EPTestCase
             touch EPTestCase.ttl
-            echo 'This folder stores all the Error Provocation test cases that are created either by the automation or by the ontology engineer. You search for a specific test case based on the requirement's ID.' > README.md
             cd ..
             cd EPDataSet
-            echo 'This folder stores all the toy dataset that are created for the Error Provocation test cases. You search for a specific toy dataset based on the requirement's ID.' > README.md
             touch EPDataSet.ttl
               
       # Display the tree structure of the directory        
