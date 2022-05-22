@@ -3,7 +3,17 @@
   "fragments": [
     {
       "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance"
+      "ontologyName": "MusicalPerformance",
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Which recording is produced by a session?",
+          "queryFileName": "RecordingSession/SPARQL01.txt",
+          "expectedResultsFileName": "RecordingSession/ER01.json",
+          "dataFileName": "RecordingSession/data01.ttl",
+          "id": "CQ001"
+        }
+      ]
     }
   ]
 }
