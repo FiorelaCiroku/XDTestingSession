@@ -12,6 +12,14 @@
           "expectedResultsFileName": "RecordingSession/ER01.json",
           "dataFileName": "RecordingSession/data01.ttl",
           "id": "CQ001"
+        },
+        {
+          "type": "GENERAL_CONSTRAINT",
+          "content": "this is a requirement",
+          "queryFileName": "RecordingSession/SPARQL01.txt",
+          "expectedResultsFileName": "RecordingSession/ER01.json",
+          "dataFileName": "RecordingSession/data01.ttl",
+          "id": "IV001"
         }
       ]
     }
