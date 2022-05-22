@@ -20,6 +20,14 @@
           "expectedResultsFileName": "RecordingSession/ER01.json",
           "dataFileName": "RecordingSession/data01.ttl",
           "id": "IV001"
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Human is not alien.",
+          "query": "my query",
+          "expectedResultsFileName": "RecordingSession/ER01.json",
+          "dataFileName": "RecordingSession/data01.ttl",
+          "id": "CQ002"
         }
       ]
     }
