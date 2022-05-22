@@ -1,3 +1,9 @@
 {
-    "type": "XD_TESTING"
+  "type": "XD_TESTING",
+  "fragments": [
+    {
+      "name": "RecordingSession",
+      "ontologyName": "MusicalPerformance"
+    }
+  ]
 }
