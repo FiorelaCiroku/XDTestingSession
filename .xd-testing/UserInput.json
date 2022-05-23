@@ -28,6 +28,14 @@
           "expectedResultsFileName": "RecordingSession/ER01.json",
           "dataFileName": "RecordingSession/data01.ttl",
           "id": "CQ002"
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Who is the performer of a musical composition?",
+          "query": "This is my query!",
+          "expectedResultsFileName": "RecordingSession/ER01.json",
+          "dataFileName": "RecordingSession/data01.ttl",
+          "id": "CQ003"
         }
       ]
     },
