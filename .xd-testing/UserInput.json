@@ -19,6 +19,12 @@
           "query": "Query",
           "dataFileName": "RecordingSession/data01.ttl",
           "id": "CQ002"
+        },
+        {
+          "type": "GENERAL_CONSTRAINT",
+          "content": "This is my requirement for the Inference Verification Test.",
+          "query": "This is my ask query for the inference verification test. ",
+          "id": "IV001"
         }
       ]
     },
