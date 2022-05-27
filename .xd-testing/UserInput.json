@@ -12,6 +12,13 @@
           "data": "My prefix number one!\n\nme love me\nme love world\nme love life\n",
           "expectedResults": "My prefix number one!\n\nme love world\n",
           "id": "CQ001"
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Hello|",
+          "query": "Query",
+          "dataFileName": "RecordingSession/data01.ttl",
+          "id": "CQ002"
         }
       ]
     },
