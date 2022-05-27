@@ -3,7 +3,17 @@
   "fragments": [
     {
       "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance"
+      "ontologyName": "MusicalPerformance",
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "How is this performer?",
+          "query": "This is my query. ",
+          "data": "My prefix number one!\n\nme love me\nme love world\nme love life\n",
+          "expectedResults": "My prefix number one!\n\nme love world\n",
+          "id": "CQ001"
+        }
+      ]
     },
     {
       "name": "Chords",
