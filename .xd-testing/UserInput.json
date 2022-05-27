@@ -4,6 +4,10 @@
     {
       "name": "RecordingSession",
       "ontologyName": "MusicalPerformance"
+    },
+    {
+      "name": "Chords",
+      "ontologyName": "MusicalFeature"
     }
   ]
 }
