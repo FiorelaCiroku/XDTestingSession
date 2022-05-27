@@ -2,44 +2,6 @@
   "type": "XD_TESTING",
   "fragments": [
     {
-      "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance",
-      "tests": [
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Which recording is produced by a session?",
-          "queryFileName": "RecordingSession/SPARQL01.txt",
-          "expectedResultsFileName": "RecordingSession/ER01.json",
-          "dataFileName": "RecordingSession/data01.ttl",
-          "id": "CQ001"
-        },
-        {
-          "type": "GENERAL_CONSTRAINT",
-          "content": "this is a requirement",
-          "queryFileName": "RecordingSession/SPARQL01.txt",
-          "expectedResultsFileName": "RecordingSession/ER01.json",
-          "dataFileName": "RecordingSession/data01.ttl",
-          "id": "IV001"
-        },
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Human is not alien.",
-          "query": "my query",
-          "expectedResultsFileName": "RecordingSession/ER01.json",
-          "dataFileName": "RecordingSession/data01.ttl",
-          "id": "CQ002"
-        },
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Who is the performer of a musical composition?",
-          "query": "This is my query!",
-          "expectedResultsFileName": "RecordingSession/ER01.json",
-          "dataFileName": "RecordingSession/data01.ttl",
-          "id": "CQ003"
-        }
-      ]
-    },
-    {
       "name": "RecordingType",
       "ontologyName": "MusicalPerformance"
     }
