@@ -32,5 +32,11 @@
       "name": "Chords",
       "ontologyName": "MusicalFeature"
     }
+  ],
+  "ontologies": [
+    {
+      "url": "urltoontology.com",
+      "name": "Musical Performance"
+    }
   ]
 }
