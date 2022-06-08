@@ -4,5 +4,12 @@
       "url": "urltoontology.com",
       "name": "Musical Performance"
     }
+  ],
+  "fragments": [
+    {
+      "name": "Musical Chord",
+      "ontologyName": "Musical Performance",
+      "fileName": "Musical Performance/Musical Chord/musical-performance_20220608194847696.owl"
+    }
   ]
 }
