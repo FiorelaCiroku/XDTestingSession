@@ -1,43 +1,4 @@
 {
-  "type": "XD_TESTING",
-  "fragments": [
-    {
-      "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance",
-      "tests": [
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "How is this performer?",
-          "query": "This is my query. ",
-          "data": "\n\nMy number prefix\n  \nme me love\nme world love\nme life love\n  \n",
-          "expectedResults": "\n\nMy number prefix\n  \nme world love\n  \n",
-          "id": "CQ001"
-        },
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Hello|",
-          "query": "Query",
-          "dataFileName": "RecordingSession/data01.ttl",
-          "id": "CQ002"
-        },
-        {
-          "type": "GENERAL_CONSTRAINT",
-          "content": "This is my requirement for the Inference Verification Test.",
-          "query": "This is my ask query for the inference verification test. ",
-          "id": "IV001"
-        }
-      ]
-    },
-    {
-      "name": "Chords",
-      "ontologyName": "MusicalFeature"
-    },
-    {
-      "name": "Musical Chord",
-      "ontologyName": "Musical Performance",
-      "fileName": "Musical Performance/Musical Chord/musical-performance.owl"
-    }
-  ],
   "ontologies": [
     {
       "url": "urltoontology.com",
