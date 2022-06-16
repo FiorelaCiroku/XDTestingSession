@@ -10,6 +10,10 @@
     {
       "url": "urltoontology.com",
       "name": "Musical Performance"
+    },
+    {
+      "url": "myurltomc.owl",
+      "name": "Musical Composition"
     }
   ]
 }
