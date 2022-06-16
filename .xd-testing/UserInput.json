@@ -3,7 +3,19 @@
     {
       "name": "Recording Session",
       "ontologyName": "Musical Performance",
-      "fileName": "Musical Performance/Recording Session/musical-performance.owl"
+      "fileName": "Musical Performance/Recording Session/musical-performance.owl",
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "In which session was a recording produced?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?session WHERE { ?recording mp:isRecordingProducedBy ?recSession . ?recSession mp:hasSession ?session . }",
+          "data": "mp:rec01 mp:isRecordingProducedBy mp:recSession01\nmp:recSession01 mp:hasSession mp:session01",
+          "expectedResults": "mp:recSession01 mp:hasSession mp:session01",
+          "id": "CQ001"
+        }
+      ]
     }
   ],
   "ontologies": [
