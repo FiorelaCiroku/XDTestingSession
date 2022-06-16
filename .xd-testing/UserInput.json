@@ -1,19 +1,15 @@
 {
-  "ontologies": [
-    {
-      "url": "urltoontology.com",
-      "name": "Musical Performance"
-    },
-    {
-      "url": "pathtoarchontology.owl",
-      "name": "Archaeology"
-    }
-  ],
   "fragments": [
     {
       "name": "Musical Chord",
       "ontologyName": "Musical Performance",
       "fileName": "Musical Performance/Musical Chord/musical-performance_20220608194847696.owl"
+    }
+  ],
+  "ontologies": [
+    {
+      "url": "urltoontology.com",
+      "name": "Musical Performance"
     }
   ]
 }
