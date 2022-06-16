@@ -1,5 +1,11 @@
 {
-  "fragments": [],
+  "fragments": [
+    {
+      "name": "Recording Session",
+      "ontologyName": "Musical Performance",
+      "fileName": "Musical Performance/Recording Session/musical-performance.owl"
+    }
+  ],
   "ontologies": [
     {
       "url": "urltoontology.com",
