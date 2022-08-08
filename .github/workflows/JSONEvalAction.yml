@@ -35,5 +35,5 @@ jobs:
           file-extension: '.config,.json'
           ignore-files: 'README.md'
           ignore-directories: '.git'
-          read-path: '.xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json'
+          read-path: '.xd-testing/RecordingSession/ER01.json'
             
