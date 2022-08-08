@@ -25,7 +25,7 @@ jobs:
       - name: Validate a JSON file
         uses: FiorelaCiroku/XDTesting-ValidateJSON@1.0.2
         with: 
-          JSONPath: ".xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json"
+          JSONFile: '{"menu": {"id": "file","value": "File","popup": {"menuitem": [{"value": "New", "onclick": "CreateNewDoc()"},{"value": "Open", "onclick": "OpenDoc()"},{"value": "Close", "onclick": "CloseDoc()"}]}}}'
 
         
 
