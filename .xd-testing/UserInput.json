@@ -25,6 +25,18 @@
           "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
           "expectedResults": "",
           "id": "IV001"
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "RQ1",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "This is a SPARQL query",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/mpToyDataset.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/ER01.json",
+          "id": "CQ002"
         }
       ]
     }
