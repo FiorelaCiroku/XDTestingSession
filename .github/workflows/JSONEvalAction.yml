@@ -1,0 +1,39 @@
+# This is a workflow that is able to run a test case.
+# Trigger: A commit to the test case directory. 
+# Input: The user input file to get the name of the cc that we are testing. 
+# Output: The execution of a test case. 
+
+# The name of the workflow
+
+name: Evaluate JSON
+
+# The event that triggers the action.
+on: 
+  push: 
+    branches: 
+      - main
+    paths: 
+      - 'ontology-network/musical-performance/**'
+  workflow_dispatch:
+ 
+jobs:
+
+# This workflow contains a job called "test-run"
+  eval-JSON:
+  
+  # The type of runner that the job will run on.
+    runs-on: ubuntu-latest
+    
+    # Check out the repository where the action is going to be executed on.
+    steps:
+      - name: Checkout V2
+        uses: actions/checkout@v2
+      
+      - name: Validate JSON
+        uses: anyone-developer/anyone-validate-json@main
+        with:
+          file-extension: '.config,.json'
+          ignore-files: 'README.md'
+          ignore-directories: '.git'
+          read-path: 'Musical Performance/Recording Session/expectedResults/ER01.json'
+            
