@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Validate a JSON file
-        uses: FiorelaCiroku/XDTesting-ValidateJSON@1.0.0
+        uses: FiorelaCiroku/XDTesting-ValidateJSON@1.0.1
         with: 
           JSONPath: '.xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json'
 
