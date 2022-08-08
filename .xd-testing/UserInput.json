@@ -14,6 +14,17 @@
           "data": "mp:rec01 mp:isRecordingProducedBy mp:recSession01\nmp:recSession01 mp:hasSession mp:session01",
           "expectedResults": "mp:recSession01 mp:hasSession mp:session01",
           "id": "CQ001"
+        },
+        {
+          "type": "INFERENCE_VERIFICATION",
+          "content": "Requirement",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "Sparql query",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
+          "expectedResults": "",
+          "id": "IV001"
         }
       ]
     }
