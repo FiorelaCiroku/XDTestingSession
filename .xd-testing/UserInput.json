@@ -19,7 +19,7 @@
           "type": "INFERENCE_VERIFICATION",
           "content": "Requirement",
           "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
+          "status": "success",
           "query": "Sparql query",
           "data": "",
           "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
