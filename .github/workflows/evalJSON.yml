@@ -1,0 +1,33 @@
+name: Validate JSON
+
+# The event that triggers the action.
+on: 
+  push: 
+    branches: 
+      - main
+    paths: 
+      - 'ontology-network/musical-performance/**'
+  workflow_dispatch:
+ 
+jobs:
+
+# This workflow contains a job called "test-run"
+  run-test:
+  
+  # The type of runner that the job will run on.
+    runs-on: ubuntu-latest
+    
+    # Check out the repository where the action is going to be executed on.
+    steps:
+      - name: Checkout V2
+        uses: actions/checkout@v2
+        
+      - name: Validate a JSON file
+        uses: FiorelaCiroku/XDTesting-ValidateJSON@1.0.0
+        with: '.xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json'
+
+        
+
+      
+  
+            
