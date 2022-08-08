@@ -25,7 +25,7 @@ jobs:
       - name: Validate a JSON file
         uses: FiorelaCiroku/XDTesting-ValidateJSON@1.0.0
         with: 
-          JSONPath:: '.xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json'
+          JSONPath: '.xd-testing/Musical Performance/Recording Session/expectedResults/ER01.json'
 
         
 
