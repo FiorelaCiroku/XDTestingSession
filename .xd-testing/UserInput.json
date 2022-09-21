@@ -2,10 +2,6 @@
   "fragments": [],
   "ontologies": [
     {
-      "url": "myurltomc.owl",
-      "name": "Musical Composition"
-    },
-    {
       "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
       "name": "MusicalPerformance"
     }
