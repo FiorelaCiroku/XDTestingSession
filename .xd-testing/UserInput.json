@@ -28,7 +28,8 @@
                     "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/Performance/InferenceVerificationTest//CQDataSet/IV001TD.ttl'"
+                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/Performance/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
+                    "check": 0
                 }
             ]
         }
