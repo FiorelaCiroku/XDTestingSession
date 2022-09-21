@@ -37,6 +37,18 @@
           "expectedResults": "",
           "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/ER01.json",
           "id": "CQ002"
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Who are the agents that took part in the session?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasAgent ?agent.} ",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/CQ11TD.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/CQ11ER.json",
+          "id": "CQ003"
         }
       ]
     }
