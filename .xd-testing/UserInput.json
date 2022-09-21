@@ -13,7 +13,8 @@
                     "query": "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?session WHERE { ?recording mp:isRecordingProducedBy ?recSession . ?recSession mp:hasSession ?session . }",
                     "data": "mp:rec01 mp:isRecordingProducedBy mp:recSession01\nmp:recSession01 mp:hasSession mp:session01",
                     "expectedResults": "mp:recSession01 mp:hasSession mp:session01",
-                    "id": "CQ001"
+                    "id": "CQ001",
+                    "check": 0
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
@@ -25,7 +26,8 @@
                     "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
                     "expectedResults": "",
                     "id": "IV001",
-                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest//CQDataSet/IV001TD.ttl'"
+                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
+                    "check": 0
                 },
                 {
                     "type": "COMPETENCY_QUESTION",
@@ -37,7 +39,8 @@
                     "dataFileName": "Musical Performance/Recording Session/datasets/mpToyDataset.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/ER01.json",
-                    "id": "CQ002"
+                    "id": "CQ002",
+                    "check": 0
                 },
                 {
                     "type": "COMPETENCY_QUESTION",
@@ -49,7 +52,8 @@
                     "dataFileName": "Musical Performance/Recording Session/datasets/CQ11TD.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/CQ11ER.json",
-                    "id": "CQ003"
+                    "id": "CQ003",
+                    "check": 0
                 }
             ]
         }
