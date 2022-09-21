@@ -1,2 +1,0 @@
-mp:rec01 mp:isRecordingProducedBy mp:recSession01
-mp:recSession01 mp:hasSession mp:session01
