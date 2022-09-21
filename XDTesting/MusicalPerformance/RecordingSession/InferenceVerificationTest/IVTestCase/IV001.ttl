@@ -1,0 +1,13 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ns: <Musical Performance/Recording Session/musical-performance.owl> .
+@prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest/IVDataSet/> .
+@prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest/IVTestCase/> .
+
+tc:IV001 a owlunit:InferenceVerificationTest ;
+	owlunit:hasCompetencyQuestion "Requirement" ;
+	owlunit:hasSPARQLUnitTest "Sparql query" ;
+	owlunit:hasInputData td:IV001TD.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult true ;
+	owlunit:hasReasoner owlunit:hermiT 1.4.3.456 ;
+	owlunit:testsOntology ns: .

@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ns: <Musical Performance/Recording Session/musical-performance.owl> .
+@prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQDataSet/> .
+@prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/> .
+
+tc:CQ001 a owlunit:CompetencyQuestionVerification ;
+	owlunit:hasCompetencyQuestion "In which session was a recording produced?" ;
+	owlunit:hasSPARQLUnitTest "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?session WHERE { ?recording mp:isRecordingProducedBy ?recSession . ?recSession mp:hasSession ?session . }" ;
+	owlunit:hasInputData td:CQ001TD.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "mp:recSession01 mp:hasSession mp:session01" ;
+	owlunit:testsOntology ns: .
