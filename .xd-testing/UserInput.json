@@ -1,71 +1,75 @@
 {
-    "fragments": [
+  "fragments": [
+    {
+      "name": "Recording Session",
+      "ontologyName": "Musical Performance",
+      "fileName": "Musical Performance/Recording Session/musical-performance.owl",
+      "tests": [
         {
-            "name": "Recording Session",
-            "ontologyName": "Musical Performance",
-            "fileName": "Musical Performance/Recording Session/musical-performance.owl",
-            "tests": [
-                {
-                    "type": "COMPETENCY_QUESTION",
-                    "content": "In which session was a recording produced?",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "running",
-                    "query": "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?session WHERE { ?recording mp:isRecordingProducedBy ?recSession . ?recSession mp:hasSession ?session . }",
-                    "data": "mp:rec01 mp:isRecordingProducedBy mp:recSession01\nmp:recSession01 mp:hasSession mp:session01",
-                    "expectedResults": "mp:recSession01 mp:hasSession mp:session01",
-                    "id": "CQ001",
-                    "check": 0
-                },
-                {
-                    "type": "INFERENCE_VERIFICATION",
-                    "content": "Requirement",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
-                    "query": "Sparql query",
-                    "data": "",
-                    "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
-                    "expectedResults": "",
-                    "id": "IV001",
-                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
-                    "check": 0
-                },
-                {
-                    "type": "COMPETENCY_QUESTION",
-                    "content": "RQ1",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "failed",
-                    "query": "This is a SPARQL query",
-                    "data": "",
-                    "dataFileName": "Musical Performance/Recording Session/datasets/mpToyDataset.ttl",
-                    "expectedResults": "",
-                    "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/ER01.json",
-                    "id": "CQ002",
-                    "check": 0
-                },
-                {
-                    "type": "COMPETENCY_QUESTION",
-                    "content": "Who are the agents that took part in the session?",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "success",
-                    "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasAgent ?agent.} ",
-                    "data": "",
-                    "dataFileName": "Musical Performance/Recording Session/datasets/CQ11TD.ttl",
-                    "expectedResults": "",
-                    "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/CQ11ER.json",
-                    "id": "CQ003",
-                    "check": 0
-                }
-            ]
-        }
-    ],
-    "ontologies": [
-        {
-            "url": "urltoontology.com",
-            "name": "Musical Performance"
+          "type": "COMPETENCY_QUESTION",
+          "content": "In which session was a recording produced?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "PREFIX mp: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/musical-performance.owl/>  PREFIX core: <https://raw.githubusercontent.com/polifonia-project/core-ontology/main/core.owl/>  SELECT DISTINCT ?session WHERE { ?recording mp:isRecordingProducedBy ?recSession . ?recSession mp:hasSession ?session . }",
+          "data": "mp:rec01 mp:isRecordingProducedBy mp:recSession01\nmp:recSession01 mp:hasSession mp:session01",
+          "expectedResults": "mp:recSession01 mp:hasSession mp:session01",
+          "id": "CQ001",
+          "check": 0
         },
         {
-            "url": "myurltomc.owl",
-            "name": "Musical Composition"
+          "type": "INFERENCE_VERIFICATION",
+          "content": "Requirement",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "warning",
+          "query": "Sparql query",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/CQKGDataset.json",
+          "expectedResults": "",
+          "id": "IV001",
+          "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
+          "check": 0
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "RQ1",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "failed",
+          "query": "This is a SPARQL query",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/mpToyDataset.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/ER01.json",
+          "id": "CQ002",
+          "check": 0
+        },
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Who are the agents that took part in the session?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "success",
+          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?agent WHERE {?recProcess mp:hasSession ?session. ?session core:hasAgentRole ?agentRole. ?agentRole core:hasAgent ?agent.} ",
+          "data": "",
+          "dataFileName": "Musical Performance/Recording Session/datasets/CQ11TD.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "Musical Performance/Recording Session/expectedResults/CQ11ER.json",
+          "id": "CQ003",
+          "check": 0
         }
-    ]
+      ]
+    }
+  ],
+  "ontologies": [
+    {
+      "url": "urltoontology.com",
+      "name": "Musical Performance"
+    },
+    {
+      "url": "myurltomc.owl",
+      "name": "Musical Composition"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+      "name": "MusicalPerformance"
+    }
+  ]
 }
