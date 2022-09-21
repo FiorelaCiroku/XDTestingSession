@@ -26,7 +26,8 @@ def loadDataFromJsonFile(filename):
 def getOntologiesName(data):
     name = data.get("ontologies")[0]['name']
     # Removing space
-    return name.replace(" ", "")
+    # name.replace(" ", "")
+    return name
 
 
 def createOntologiesDirectory(name):
@@ -83,7 +84,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/CompetencyQuestionVerificationTest/CQDataSet/README.md", "w+")
             file.write(
-                "This directory stores Competency Question Verification test cases' data.")
+                "This directory stores the sample dataset for Competency Question Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/InferenceVerificationTest/IVTestCase'):
@@ -100,7 +101,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/InferenceVerificationTest/IVDataSet/README.md", "w+")
             file.write(
-                "This directory stores Inference Verification test cases' data.")
+                "This directory stores the sample dataset for Inference Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/ErrorProvocationTest/EPTestCase'):
@@ -117,7 +118,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/ErrorProvocationTest/EPDataSet/README.md", "w+")
             file.write(
-                "This directory stores Error Provocation test cases' data.")
+                "This directory stores the sample dataset for Error Provocation test cases.")
             file.close()
 
     except OSError as error:
