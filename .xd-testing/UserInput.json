@@ -3,7 +3,21 @@
     {
       "name": "Performance",
       "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/Performance/Performance.owl"
+      "fileName": "MusicalPerformance/Performance/Performance.owl",
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Where was a musical composition performed?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
+          "data": "",
+          "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ11ER.json",
+          "id": "CQ001"
+        }
+      ]
     }
   ],
   "ontologies": [
