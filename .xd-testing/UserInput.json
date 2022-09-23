@@ -1,55 +1,55 @@
 {
-  "fragments": [
-    {
-      "name": "Performance",
-      "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/Performance/Performance.owl",
-      "tests": [
+    "fragments": [
         {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Where was a musical composition performed?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
-          "data": "",
-          "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ11ER.json",
-          "id": "CQ001",
-          "check": 0
-        },
-        {
-          "type": "INFERENCE_VERIFICATION",
-          "content": "Musical performance is disjointed with musical session. ",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "warning",
-          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
-          "data": "",
-          "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
-          "expectedResults": "",
-          "id": "IV001",
-          "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/Performance/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
-          "check": 0
-        },
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "When was a musical performance recorded?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?time WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasTimeInterval ?time }",
-          "data": "",
-          "dataFileName": "MusicalPerformance/Performance/datasets/CQ2.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ2Results.json",
-          "id": "CQ002"
+            "name": "Performance",
+            "ontologyName": "MusicalPerformance",
+            "fileName": "MusicalPerformance/Performance/Performance.owl",
+            "tests": [
+                {
+                    "type": "COMPETENCY_QUESTION",
+                    "content": "Where was a musical composition performed?",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "running",
+                    "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
+                    "expectedResults": "",
+                    "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ11ER.json",
+                    "id": "CQ001",
+                    "check": 0
+                },
+                {
+                    "type": "INFERENCE_VERIFICATION",
+                    "content": "Musical performance is disjointed with musical session. ",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "warning",
+                    "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/Performance/datasets/CQ11TD.ttl",
+                    "expectedResults": "",
+                    "id": "IV001",
+                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/Performance/InferenceVerificationTest//CQDataSet/IV001TD.ttl'",
+                    "check": 0
+                },
+                {
+                    "type": "COMPETENCY_QUESTION",
+                    "content": "When was a musical performance recorded?",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "running",
+                    "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?time WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasTimeInterval ?time }",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/Performance/datasets/CQ2.ttl",
+                    "expectedResults": "",
+                    "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ2Results.json",
+                    "id": "CQ002"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "ontologies": [
-    {
-      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
-      "name": "MusicalPerformance"
-    }
-  ]
+    ],
+    "ontologies": [
+        {
+            "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+            "name": "MusicalPerformance"
+        }
+    ]
 }

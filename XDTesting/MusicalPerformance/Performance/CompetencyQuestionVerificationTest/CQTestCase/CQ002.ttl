@@ -1,0 +1,12 @@
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ns: <MusicalPerformance/Performance/Performance.owl> .
+@prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/Performance/CompetencyQuestionVerificationTest/CQDataSet/> .
+@prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/Performance/CompetencyQuestionVerificationTest/CQTestCase/> .
+
+tc:CQ002 a owlunit:CompetencyQuestionVerification ;
+	owlunit:hasCompetencyQuestion "When was a musical performance recorded?" ;
+	owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?time WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasTimeInterval ?time }" ;
+	owlunit:hasInputData td:CQ002TD.ttl ;
+	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
+	owlunit:hasExpectedResult "" ;
+	owlunit:testsOntology ns: .
