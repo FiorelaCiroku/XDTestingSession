@@ -45,6 +45,11 @@
           "check": 0
         }
       ]
+    },
+    {
+      "name": "Session",
+      "ontologyName": "MusicalPerformance",
+      "fileName": "MusicalPerformance/Session/Performance.owl"
     }
   ],
   "ontologies": [
