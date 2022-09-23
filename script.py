@@ -270,7 +270,7 @@ def getContent(test):
 def getQueryContent(test):
     if test.get('query') is None:
         queryPath = ".xd-testing"+queryFileName
-        file = open(test.get('queryPath'), "r")
+        file = open(test.get(queryPath), "r")
         #file = open(test.get('queryFileName'), "r")
         return file.read()
         #return test.get('queryFileName')
