@@ -49,7 +49,21 @@
     {
       "name": "Session",
       "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/Session/Performance.owl"
+      "fileName": "MusicalPerformance/Session/Performance.owl",
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "When was a musical performance recorded?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "queryFileName": "MusicalPerformance/Session/queries/SPARQL.text",
+          "data": "",
+          "dataFileName": "MusicalPerformance/Session/datasets/CQ2.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "MusicalPerformance/Session/expectedResults/CQ2Results.json",
+          "id": "CQ001"
+        }
+      ]
     }
   ],
   "ontologies": [
