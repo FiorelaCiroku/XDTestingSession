@@ -62,7 +62,7 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/Session/expectedResults/CQ2Results.json",
                     "id": "CQ001",
-                    "statusNotes": "name 'queryFileName' is not defined",
+                    "statusNotes": "[Errno 2] No such file or directory: '.xd-testingMusicalPerformance/Session/queries/SPARQL.text'",
                     "check": 0
                 }
             ]
