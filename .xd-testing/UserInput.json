@@ -41,7 +41,8 @@
                     "dataFileName": "MusicalPerformance/Performance/datasets/CQ2.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/Performance/expectedResults/CQ2Results.json",
-                    "id": "CQ002"
+                    "id": "CQ002",
+                    "check": 0
                 }
             ]
         }
