@@ -270,11 +270,8 @@ def getContent(test):
 def getQueryContent(test):
     if test.get('query') is None:
         queryPath = '.xd-testing/' + test.get('queryFileName')
-        print("The query path is ", queryPath)
         file = open(queryPath, "r")
-        #file = open(test.get('queryFileName'), "r")
         return file.read()
-        #return test.get('queryFileName')
     else:
         # return urlopen(test.get('query')).read()
         return test.get('query')
@@ -282,18 +279,18 @@ def getQueryContent(test):
 # Get expected result
 def getExpectedResultsContent(test):
     if test.get('expectedResults') is None:
-        #file = open(test.get('expectedResultsFileName'), "r")
-        #return file.read()
-         return test.get('expectedResultsFileName')
+        testPath = '.xd-testing/' + test.get('expectedResultsFileName')
+        file = open(testPath, "r")
+        return file.read()
     else:
         return test.get('expectedResults')
 
 # Get data
 def getData(test):
     if test.get('data') is None:
-        #file = open(test.get('dataFileName'), "r")
-        #return file.read()
-        return test.get('dataFileName')
+        dataPath = '.xd-testing/' + test.get('dataFileName')
+        file = open(dataPath, "r")
+        return file.read()
     else:
         return test.get('data')
 
