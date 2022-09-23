@@ -409,7 +409,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
                             f.write(
-                                '@prefix ns: <'+fileData['fragments'][indexFragment]['fileName'] + '> .\n')
+                                '@prefix ns: <'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] + '> .\n')
                             f.write('@prefix td: <' +
                                     testFileLink+'IVDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
@@ -455,7 +455,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> \n')
                             f.write(
-                                '@prefix ns: <'+fileData['fragments'][indexFragment]['fileName'] + '> .\n')
+                                '@prefix ns: <'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] + '> .\n')
                             f.write('@prefix td: <' +
                                     testFileLink+'EPDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
