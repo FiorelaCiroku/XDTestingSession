@@ -45,11 +45,6 @@
           "check": 0
         }
       ]
-    },
-    {
-      "name": "Chords",
-      "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/Chords/Performance.owl"
     }
   ],
   "ontologies": [
