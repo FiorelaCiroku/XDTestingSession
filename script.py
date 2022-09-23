@@ -302,6 +302,11 @@ def getID(test):
 def getReasoner(test):
     return test.get('reasoner')
 
+# Get ontology url
+def getOntologyUrl(test):
+    return test.get("ontologies")[0]['url'])
+     
+
 # Update test status
 def setCheckValue(filename, value, indexFragment, indexTest):
     data = loadDataFromJsonFile(filename)
@@ -361,7 +366,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
                             f.write(
-                                '@prefix ns: <'+fileData['fragments'][indexFragment]['fileName'] + '> .\n')
+                                #'@prefix ns: <'+fileData['fragments'][indexFragment]['fileName'] + '> .\n')
+                                '@prefix ns: <'+'.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] + '> .\n')
                             f.write('@prefix td: <' +
                                     testFileLink+'CQDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
