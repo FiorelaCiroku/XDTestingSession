@@ -304,7 +304,7 @@ def getReasoner(test):
 
 # Get ontology url
 def getOntologyUrl(test):
-    return test.get("ontologies")[0]['url'])
+    return test.get("ontologies")[0]['url']
      
 
 # Update test status
