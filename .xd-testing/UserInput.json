@@ -62,7 +62,8 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/Session/expectedResults/CQ2Results.json",
                     "id": "CQ001",
-                    "statusNotes": "[Errno 2] No such file or directory: 'MusicalPerformance/Session/queries/SPARQL.text'"
+                    "statusNotes": "[Errno 2] No such file or directory: 'MusicalPerformance/Session/queries/SPARQL.text'",
+                    "check": 0
                 }
             ]
         }
