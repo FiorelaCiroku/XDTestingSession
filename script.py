@@ -16,20 +16,19 @@ from rdflib.namespace import XSD
 from pytablewriter import MarkdownTableWriter
 from datetime import date
 
-
+# Load data from a JSON file
 def loadDataFromJsonFile(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
     return data
 
-
+# Get the ontology name
 def getOntologiesName(data):
     name = data.get("ontologies")[0]['name']
     # Removing space
-    # name.replace(" ", "")
-    return name
+    return name.replace(" ", "")
 
-
+# Create ontology directory
 def createOntologiesDirectory(name):
     # Directory
     directory = name
@@ -84,7 +83,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/CompetencyQuestionVerificationTest/CQDataSet/README.md", "w+")
             file.write(
-                "This directory stores the sample dataset for Competency Question Verification test cases.")
+                "This directory stores the sample dataset for the Competency Question Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/InferenceVerificationTest/IVTestCase'):
@@ -92,7 +91,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/InferenceVerificationTest/IVTestCase/README.md", "w+")
             file.write(
-                "This directory stores Inference Verification test cases' data.")
+                "This directory stores Inference Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/InferenceVerificationTest/IVDataSet'):
@@ -101,7 +100,7 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/InferenceVerificationTest/IVDataSet/README.md", "w+")
             file.write(
-                "This directory stores the sample dataset for Inference Verification test cases.")
+                "This directory stores the sample dataset for the Inference Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/ErrorProvocationTest/EPTestCase'):
@@ -118,13 +117,13 @@ def createOntologiesDirectory(name):
             file = open(
                 path + "/ErrorProvocationTest/EPDataSet/README.md", "w+")
             file.write(
-                "This directory stores the sample dataset for Error Provocation test cases.")
+                "This directory stores the sample dataset for the Error Provocation test cases.")
             file.close()
 
     except OSError as error:
         print(error)
 
-
+# Get fragment name
 def getFragmentsName(data):
     listOfFragmentName = []
     for fragment in data['fragments']:
@@ -134,7 +133,7 @@ def getFragmentsName(data):
         listOfFragmentName.append(fragmentDetail)
     return listOfFragmentName
 
-
+# Create fragment directory
 def createFragmentDirectory(fragmentName, name):
     # Directory
     directory = fragmentName
@@ -184,7 +183,11 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/CompetencyQuestionVerificationTest/CQTestCase/README.md", "w+")
             file.write(
-                "This directory stores Competency Question Verification test cases.")
+                "# Competency Question Verification Test \n")
+            file.write(
+                "This directory stores Competency Question Verification test cases.\n")
+            file.write(
+                "Competency Question Verification tests allow to verify if the ontology can answer the competency questions that have been collected during the requirement collection.")
             file.close()
 
         if not os.path.exists(path + '/CompetencyQuestionVerificationTest/CQDataSet'):
@@ -193,7 +196,7 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/CompetencyQuestionVerificationTest/CQDataSet/README.md", "w+")
             file.write(
-                "This directory stores Competency Question Verification test cases' data.")
+                "This directory stores the sample data for the Competency Question Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/InferenceVerificationTest/IVTestCase'):
@@ -201,7 +204,7 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/InferenceVerificationTest/IVTestCase/README.md", "w+")
             file.write(
-                "This directory stores Inference Verification test cases' data.")
+                "This directory stores Inference Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/InferenceVerificationTest/IVDataSet'):
@@ -210,7 +213,7 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/InferenceVerificationTest/IVDataSet/README.md", "w+")
             file.write(
-                "This directory stores Inference Verification test cases' data.")
+                "This directory stores the sample data for the Inference Verification test cases.")
             file.close()
 
         if not os.path.exists(path + '/ErrorProvocationTest/EPTestCase'):
@@ -227,7 +230,7 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/ErrorProvocationTest/EPDataSet/README.md", "w+")
             file.write(
-                "This directory stores Error Provocation test cases' data.")
+                "This directory stores the sample data for the Error Provocation test cases.")
             file.close()
 
         os.mkdir(path)
@@ -236,7 +239,7 @@ def createFragmentDirectory(fragmentName, name):
         print(error)
     print("Directory '% s' created" % directory)
 
-
+# Validate the expected result by loading JSON
 def validateJSON(jsonData):
     try:
         json.loads(jsonData)
@@ -244,7 +247,7 @@ def validateJSON(jsonData):
     except ValueError as error:
         print("Error - "+error)
 
-
+# Validate SPARQL by preparing query
 def validateSPARQL(query):
     print("The variable is ", query)
     try:
@@ -255,15 +258,15 @@ def validateSPARQL(query):
     except Exception as error:
         print("Error - "+error)
 
-
+# Get test type
 def getTestType(test):
     return test.get('type')
 
-
+# Get content (competency question)
 def getContent(test):
     return test.get('content')
 
-
+# Get query content
 def getQueryContent(test):
     if test.get('query') is None:
         file = open(test.get('queryFileName'), "r")
@@ -272,30 +275,31 @@ def getQueryContent(test):
         # return urlopen(test.get('query')).read()
         return test.get('query')
 
-# def getExpectedResults
-
-
+# Get expected result
 def getExpectedResultsContent(test):
     if test.get('expectedResults') is None:
-        return test.get('expectedResultsFileName')
+        file = open(test.get('expectedResultsFileName'), "r")
+        return file.read()
+        # return test.get('expectedResultsFileName')
     else:
         return test.get('expectedResults')
 
-
+# Get data
 def getData(test):
     if test.get('data') is None:
-        return test.get('dataFileName')
+        file = open(test.get('dataFileName'), "r")
+        return file.read()
+        #return test.get('dataFileName')
     else:
         return test.get('data')
 
-
+# Get test ID
 def getID(test):
     return test.get('id')
 
-
+# Get reasoner
 def getReasoner(test):
     return test.get('reasoner')
-
 
 # Update test status
 def setCheckValue(filename, value, indexFragment, indexTest):
@@ -307,14 +311,14 @@ def setCheckValue(filename, value, indexFragment, indexTest):
                   separators=(',', ': '))
         json_file.close()
 
-
+# Get check value
 def getCheckValue(data, indexFragment, indexTest):
     try:
         return data['fragments'][indexFragment]['tests'][indexTest]['check']
     except:
         return None
 
-
+# Set status value
 def setStatusValue(filename, value, indexFragment, indexTest):
     data = loadDataFromJsonFile(filename)
     data['fragments'][indexFragment]['tests'][indexTest]['status'] = value
@@ -324,7 +328,7 @@ def setStatusValue(filename, value, indexFragment, indexTest):
                   separators=(',', ': '))
         json_file.close()
 
-
+# Set status notes
 def setStatusNotesValue(filename, value, indexFragment, indexTest):
     data = loadDataFromJsonFile(filename)
     data['fragments'][indexFragment]['tests'][indexTest]['statusNotes'] = str(
@@ -335,7 +339,7 @@ def setStatusNotesValue(filename, value, indexFragment, indexTest):
                   separators=(',', ': '))
         json_file.close()
 
-
+# Create test case and data set file
 def createTestCaseAndDataSetFile(fileData, fileName, repoName):
     for indexFragment in range(len(fileData['fragments'])):
         for indexTest in range(len(fileData['fragments'][indexFragment]['tests'])):
@@ -476,7 +480,7 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
     if result == "PASSED":
         writer = MarkdownTableWriter(
             headers=["Test case documentation",
-                     "v1"],
+                     "Information"],
             value_matrix=[
                 ["Test case ID", getID(testData)],
                 ["Test category", getTestType(testData)],
@@ -633,23 +637,23 @@ fileName = '.xd-testing/UserInput.json'
 fileData = loadDataFromJsonFile(fileName)
 
 if arg == "create":
-    # Step 1
+    # Step 1 - Get ontology name
     ontologyName = getOntologiesName(fileData)
 
-    # Step2
+    # Step 2 - Create the GitHub directories for the ontology
     createOntologiesDirectory(ontologyName)
 
-    # Step3
+    # Step 3 - Get fragment name
     listOfFragmentName = getFragmentsName(fileData)
     print(listOfFragmentName)
 
-    # Step4
+    # Step 4 - Create the GitHub directories for the module
     for fragment, ontology in listOfFragmentName:
         createFragmentDirectory(fragment, ontology)
 
-    # Step5
+    # Step 5 - Create test cases and dataset files
     createTestCaseAndDataSetFile(fileData, fileName, repoName)
 
 elif arg == "test":
-    # Step6
+    # Step 6 - Execute test cases
     executeTestCase(fileData, fileName, repoName, token)
