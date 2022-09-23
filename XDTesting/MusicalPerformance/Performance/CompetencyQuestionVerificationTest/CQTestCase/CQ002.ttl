@@ -1,5 +1,5 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix ns: <MusicalPerformance/Performance/Performance.owl> .
+@prefix ns: <.xd-testing/MusicalPerformance/Performance/Performance.owl> .
 @prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/Performance/CompetencyQuestionVerificationTest/CQDataSet/> .
 @prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/Performance/CompetencyQuestionVerificationTest/CQTestCase/> .
 
