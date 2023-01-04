@@ -1,5 +1,11 @@
 {
-  "fragments": [],
+  "fragments": [
+    {
+      "name": "RecordingSession",
+      "ontologyName": "MusicalPerformance",
+      "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl"
+    }
+  ],
   "ontologies": [
     {
       "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
