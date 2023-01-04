@@ -1,0 +1,10 @@
+{
+  "fragments": [],
+  "ontologies": [
+    {
+      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+      "name": "MusicalPerformance",
+      "userDefined": true
+    }
+  ]
+}
