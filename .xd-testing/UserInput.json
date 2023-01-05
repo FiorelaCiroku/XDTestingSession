@@ -1,36 +1,46 @@
 {
-    "fragments": [
+  "fragments": [
+    {
+      "name": "RecordingSession",
+      "ontologyName": "MusicalPerformance",
+      "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
+      "tests": [
         {
-            "name": "RecordingSession",
-            "ontologyName": "MusicalPerformance",
-            "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-            "tests": [
-                {
-                    "type": "COMPETENCY_QUESTION",
-                    "content": "Where was a musical composition performed?",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "running",
-                    "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
-                    "data": "",
-                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
-                    "expectedResults": "",
-                    "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
-                    "id": "CQ001",
-                    "check": 0
-                }
-            ]
-        }
-    ],
-    "ontologies": [
-        {
-            "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
-            "name": "MusicalPerformance",
-            "userDefined": true
+          "type": "COMPETENCY_QUESTION",
+          "content": "Where was a musical composition performed?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
+          "data": "",
+          "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
+          "id": "CQ001",
+          "check": 0
         },
         {
-            "url": "https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance2/MusicalPerformance2.owl",
-            "name": "MusicalPerformance2",
-            "userDefined": true
+          "type": "ERROR_PROVOCATION",
+          "content": "",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "data": "",
+          "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
+          "expectedResults": "",
+          "id": "EP001"
         }
-    ]
+      ]
+    }
+  ],
+  "ontologies": [
+    {
+      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+      "name": "MusicalPerformance",
+      "userDefined": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance2/MusicalPerformance2.owl",
+      "name": "MusicalPerformance2",
+      "userDefined": true
+    }
+  ]
 }
