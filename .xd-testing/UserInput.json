@@ -22,12 +22,11 @@
           "type": "ERROR_PROVOCATION",
           "content": "",
           "reasoner": "hermiT 1.4.3.456",
-          "status": "warning",
-          "data": "",
+          "status": "running",
+          "data": "london type city\nparis type animal",
           "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
           "expectedResults": "",
-          "id": "EP001",
-          "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP001.ttl'"
+          "id": "EP001"
         },
         {
           "type": "ERROR_PROVOCATION",
