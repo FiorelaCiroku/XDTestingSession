@@ -36,6 +36,15 @@
           "data": "td:<https://w3id.org/td/>\ncore:<https://w3id.org/core/>\nrdf:<https://w3id.org/rdf/>\n\ntd:FirenzePerformance core:hasPlace td:Firenze\ntd:Firenze rdf:type core:TimeInterval",
           "expectedResults": "td:<https://w3id.org/td/>\ncore:<https://w3id.org/core/>\nrdf:<https://w3id.org/rdf/>",
           "id": "EP002"
+        },
+        {
+          "type": "ERROR_PROVOCATION",
+          "content": "",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "data": "MyPrefix: <https://myprefix.com>\n\nMyPrefix:london MyPrefix:type MyPrefix:city\nMyPrefix:paris MyPrefix:type MyPrefix:food",
+          "expectedResults": "MyPrefix: <https://myprefix.com>",
+          "id": "EP003"
         }
       ]
     }
