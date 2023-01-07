@@ -26,14 +26,14 @@ def loadDataFromJsonFile(filename):
 def getOntologiesName(data):
     name = data.get("ontologies")[0]['name']
     # Removing space
-    return name.replace(" ", "")
+    return name.replace(" ", "") 
 
 # Create ontology directory
 def createOntologiesDirectory(name):
     # Directory
     directory = name
     # Parent Directory path
-    parent_dir = "./XDTesting"
+    parent_dir = "./XDTestingDocumentation"
     try:
         # Path
         path = os.path.join(parent_dir, directory)
