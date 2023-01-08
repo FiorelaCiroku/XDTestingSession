@@ -33,7 +33,7 @@ def createOntologiesDirectory(name):
     # Directory
     directory = name
     # Parent Directory path
-    parent_dir = "./XDTestingDocumentation"
+    parent_dir = "./XDTesting"
     try:
         # Path
         path = os.path.join(parent_dir, directory)
@@ -607,6 +607,8 @@ def executeTestCase(fileData, fileName, repoName, token):
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
+                        print("testFileLink" , testFileLink)
+                        print("testFilePath", testFilePath)
 
                         print('---- Executing Test ----')
                         os.system(
