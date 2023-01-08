@@ -469,8 +469,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.close()
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
-                                getData(testData))
-                            print(f.read())
+                                getData(testData)
                             f.close()
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
