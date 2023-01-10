@@ -9,7 +9,7 @@
                     "type": "COMPETENCY_QUESTION",
                     "content": "Where was a musical composition performed?",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "success",
+                    "status": "running",
                     "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
@@ -17,17 +17,6 @@
                     "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
                     "id": "CQ001",
                     "check": 0
-                },
-                {
-                    "type": "ERROR_PROVOCATION",
-                    "content": "",
-                    "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
-                    "data": "london type city\nparis type animal",
-                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
-                    "expectedResults": "",
-                    "id": "EP001",
-                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP001.ttl'"
                 }
             ]
         }
