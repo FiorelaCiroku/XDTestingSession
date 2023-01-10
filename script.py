@@ -404,6 +404,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData))
+                            print("File i te dhenave", f.read())
                             f.close()
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
@@ -672,11 +673,13 @@ if arg == "create":
     # Step 4 - Create the GitHub directories for the module
     for fragment, ontology in listOfFragmentName:
         createFragmentDirectory(fragment, ontology)
+        
+    print('Test data ', getData(test))
 
     # Step 5 - Create test cases and dataset files
     createTestCaseAndDataSetFile(fileData, fileName, repoName)
     
-    print('Test data ', getData(test))
+    
 
 elif arg == "test":
     # Step 6 - Execute test cases
