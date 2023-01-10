@@ -400,7 +400,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 '\towlunit:testsOntology ns: .\n')
                             print(f.read())
                             f.close()
-                        print('URL per toy dataset', testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl')
+                        
+                        tdFilePath = testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl'
+                        print('URL per toy dataset', tdFilePath)
+                        
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData))
