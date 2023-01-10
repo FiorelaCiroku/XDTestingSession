@@ -1,40 +1,42 @@
 {
-  "fragments": [
-    {
-      "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-      "tests": [
+    "fragments": [
         {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Where was a musical composition performed?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "queryFileName": "MusicalPerformance/RecordingSession/queries/DE1.ttl",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
-          "id": "CQ001"
-        },
-        {
-          "type": "ERROR_PROVOCATION",
-          "content": "",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
-          "expectedResults": "",
-          "id": "EP001"
+            "name": "RecordingSession",
+            "ontologyName": "MusicalPerformance",
+            "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
+            "tests": [
+                {
+                    "type": "COMPETENCY_QUESTION",
+                    "content": "Where was a musical composition performed?",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "warning",
+                    "queryFileName": "MusicalPerformance/RecordingSession/queries/DE1.ttl",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
+                    "expectedResults": "",
+                    "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
+                    "id": "CQ001",
+                    "statusNotes": "not readable"
+                },
+                {
+                    "type": "ERROR_PROVOCATION",
+                    "content": "",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "warning",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
+                    "expectedResults": "",
+                    "id": "EP001",
+                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP001.ttl'"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "ontologies": [
-    {
-      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
-      "name": "MusicalPerformance",
-      "userDefined": true
-    }
-  ]
+    ],
+    "ontologies": [
+        {
+            "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+            "name": "MusicalPerformance",
+            "userDefined": true
+        }
+    ]
 }
