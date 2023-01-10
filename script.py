@@ -386,7 +386,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write('\towlunit:hasCompetencyQuestion \"' +
                                     getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
-                                    getData(testData)+'\" ;\n').  #getQueryContent(testData)
+                                    getData(testData)+'\" ;\n') #.  #getQueryContent(testData)
                             f.write('\towlunit:hasInputData td:' +
                                     getID(testData)+'TD.ttl ;\n')
                             f.write(
