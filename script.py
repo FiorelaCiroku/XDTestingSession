@@ -389,6 +389,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             print(f.read())
+                            print("File being printed")
+                            # print test case content
+                            fileContent = f.read()
+                            print(fileContent)
                             f.close()
 
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
@@ -470,9 +474,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getID(testData)+'TD.ttl ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
-                            # print test case content
-                            fileContent = f.read()
-                            print(fileContent)
                             f.close()
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
