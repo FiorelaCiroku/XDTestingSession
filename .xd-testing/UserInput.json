@@ -34,16 +34,6 @@
           "content": "",
           "reasoner": "hermiT 1.4.3.456",
           "status": "warning",
-          "data": "td:<https://w3id.org/td/>\ncore:<https://w3id.org/core/>\nrdf:<https://w3id.org/rdf/>\n\ntd:FirenzePerformance core:hasPlace td:Firenze\ntd:Firenze rdf:type core:TimeInterval",
-          "expectedResults": "td:<https://w3id.org/td/>\ncore:<https://w3id.org/core/>\nrdf:<https://w3id.org/rdf/>",
-          "id": "EP002",
-          "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP002.ttl'"
-        },
-        {
-          "type": "ERROR_PROVOCATION",
-          "content": "",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "warning",
           "data": "MyPrefix: <https://myprefix.com>\n\nMyPrefix:london MyPrefix:type MyPrefix:city\nMyPrefix:paris MyPrefix:type MyPrefix:food",
           "expectedResults": "MyPrefix: <https://myprefix.com>",
           "id": "EP003",
