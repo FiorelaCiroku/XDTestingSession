@@ -379,7 +379,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '@prefix owlunit:<https://w3id.org/OWLunit/ontology/>.\n')
                             f.write(
-                                '@prefix ns:<'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] +'>.\n')
+                                '@prefix ns:<'+'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] +'>.\n')
                             f.write('@prefix td:<' +
                                     testFileLink+'CQDataSet/>.\n')
                             f.write('@prefix tc:<'+testFileLink +
@@ -675,6 +675,8 @@ if arg == "create":
 
     # Step 5 - Create test cases and dataset files
     createTestCaseAndDataSetFile(fileData, fileName, repoName)
+    
+    print('Test data ', getData(test))
 
 elif arg == "test":
     # Step 6 - Execute test cases
