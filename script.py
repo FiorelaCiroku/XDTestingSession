@@ -283,10 +283,12 @@ def getQueryContent(test):
 def getExpectedResultsContent(test):
     if test.get('expectedResults') is None:
         testPath = '.xd-testing/' + test.get('expectedResultsFileName')
+        print(testPath)
         file = open(testPath, "r")
         return file.read()
     else:
-        return test.get('expectedResults')
+        #return test.get('expectedResults')
+        return urlopen(test.get('expectedResults')).read()
 
 # Get data
 def getData(test):
@@ -367,13 +369,13 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/CompetencyQuestionVerificationTest/"
                         with open(testFilePath+'/CQTestCase/'+getID(testData)+'.ttl', 'w') as f:
                             f.write(
-                                '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
+                                '@prefix owlunit:<https://w3id.org/OWLunit/ontology/>.\n')
                             f.write(
-                                '@prefix ns: <'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] + '> .\n')
-                            f.write('@prefix td: <' +
-                                    testFileLink+'CQDataSet/> .\n')
-                            f.write('@prefix tc: <'+testFileLink +
-                                    'CQTestCase/> .\n\n')
+                                '@prefix ns:<'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] +'>.\n')
+                            f.write('@prefix td:<' +
+                                    testFileLink+'CQDataSet/>.\n')
+                            f.write('@prefix tc:<'+testFileLink +
+                                    'CQTestCase/>.\n\n')
                             f.write('tc:'+getID(testData) +
                                     ' a owlunit:CompetencyQuestionVerification ;\n')
                             f.write('\towlunit:hasCompetencyQuestion \"' +
@@ -389,10 +391,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             print(f.read())
-                            print("File being printed")
-                            # print test case content
-                            fileContent = f.read()
-                            print(fileContent)
                             f.close()
 
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
