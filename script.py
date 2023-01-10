@@ -41,6 +41,11 @@ def createOntologiesDirectory(name):
         if not os.path.exists(path):
             os.makedirs(path)
             print("Directory '% s' created" % directory)
+            
+        if not os.path.exists(path + '/IntegrationRegressionTestDocumentation'):
+            os.mkdir(path + '/IntegrationRegressionTestDocumentation')
+        
+        path = path + '/IntegrationRegressionTestDocumentation'
 
         if not os.path.exists(path + '/TestDocumentation'):
             os.mkdir(path + '/TestDocumentation')
