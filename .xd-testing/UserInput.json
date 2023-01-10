@@ -16,7 +16,7 @@
           "expectedResults": "",
           "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
           "id": "CQ001",
-          "check": 0
+          "check": 1
         },
         {
           "type": "ERROR_PROVOCATION",
