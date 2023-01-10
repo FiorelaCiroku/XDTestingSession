@@ -288,7 +288,6 @@ def getQueryContent(test):
 def getExpectedResultsContent(test):
     if test.get('expectedResults') is None:
         testPath = '.xd-testing/' + test.get('expectedResultsFileName')
-        print(testPath)
         file = open(testPath, "r")
         return file.read()
     else:
@@ -387,7 +386,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write('\towlunit:hasCompetencyQuestion \"' +
                                     getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
-                                    getQueryContent(testData)+'\" ;\n')
+                                    getData(testData)+'\" ;\n').  #getQueryContent(testData)
                             f.write('\towlunit:hasInputData td:' +
                                     getID(testData)+'TD.ttl ;\n')
                             f.write(
@@ -403,6 +402,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 getData(testData))
                             f.close()
+                            
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
                                        indexFragment, indexTest)
