@@ -28,16 +28,6 @@
           "expectedResults": "",
           "id": "EP001",
           "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP001.ttl'"
-        },
-        {
-          "type": "ERROR_PROVOCATION",
-          "content": "",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "warning",
-          "data": "MyPrefix: <https://myprefix.com>\n\nMyPrefix:london MyPrefix:type MyPrefix:city\nMyPrefix:paris MyPrefix:type MyPrefix:food",
-          "expectedResults": "MyPrefix: <https://myprefix.com>",
-          "id": "EP003",
-          "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation//IVTestCase/EP003.ttl'"
         }
       ]
     }
