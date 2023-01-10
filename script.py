@@ -148,7 +148,7 @@ def createFragmentDirectory(fragmentName, name):
             file = open(
                 path + "/README.md", "w+")
             file.write(
-                "Fragment")
+                "Fragment testing documentation")
             file.close()
             # os.makedirs()
         if not os.path.exists(path + '/TestDocumentation'):
@@ -244,8 +244,10 @@ def validateJSON(jsonData):
     try:
         json.loads(jsonData)
         print("Success!")
+        return true
     except ValueError as error:
         print("Error - "+error)
+        return error
 
 # Validate SPARQL by preparing query
 def validateSPARQL(query):
@@ -254,9 +256,10 @@ def validateSPARQL(query):
         q = prepareQuery(query, initNs={
                          "foaf": FOAF, "rdfs": RDFS, "rdf": RDF, "owl": OWL, "xsd": XSD},)
         print("Success!")
-
+        return true
     except Exception as error:
         print("Error - "+error)
+        return error
 
 # Get test type
 def getTestType(test):
@@ -467,12 +470,13 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getID(testData)+'TD.ttl ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
+                            # print test case content
+                            fileContent = f.read()
+                            print(fileContent)
                             f.close()
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData))
-                            fileContent = f.read()
-                            print(fileContent)
                             f.close()
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
