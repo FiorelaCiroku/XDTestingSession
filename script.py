@@ -673,8 +673,6 @@ if arg == "create":
     # Step 4 - Create the GitHub directories for the module
     for fragment, ontology in listOfFragmentName:
         createFragmentDirectory(fragment, ontology)
-        
-    print('Test data ', getData(test))
 
     # Step 5 - Create test cases and dataset files
     createTestCaseAndDataSetFile(fileData, fileName, repoName)
