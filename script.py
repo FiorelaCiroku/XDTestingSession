@@ -398,9 +398,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             print(f.read())
                             f.close()
                         
+                        print(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl')
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
-                                getQueryContent(testData))  # getData(testData))
+                                getData(testData)) 
                             f.close()
                             
                     except Exception as error:
