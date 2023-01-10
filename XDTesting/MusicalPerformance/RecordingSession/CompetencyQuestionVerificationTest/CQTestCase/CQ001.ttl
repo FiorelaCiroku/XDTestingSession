@@ -4,7 +4,7 @@
 @prefix tc:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/>.
 
 tc:CQ001 a owlunit:CompetencyQuestionVerification ;
-	owlunit:hasCompetencyQuestion "Where was a musical composition performed?" ;
+	owlunit:hasCompetencyQuestion "What is she?" ;
 	owlunit:hasSPARQLUnitTest "@prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
 @prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 @prefix core: <https://w3id.org/polifonia/ontology/core/> .

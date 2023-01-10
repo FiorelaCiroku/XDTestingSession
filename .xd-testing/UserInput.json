@@ -1,30 +1,31 @@
 {
-  "fragments": [
-    {
-      "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-      "tests": [
+    "fragments": [
         {
-          "type": "COMPETENCY_QUESTION",
-          "content": "What is she?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "queryFileName": "MusicalPerformance/RecordingSession/queries/DE1.ttl",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
-          "id": "CQ001"
+            "name": "RecordingSession",
+            "ontologyName": "MusicalPerformance",
+            "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
+            "tests": [
+                {
+                    "type": "COMPETENCY_QUESTION",
+                    "content": "What is she?",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "warning",
+                    "queryFileName": "MusicalPerformance/RecordingSession/queries/DE1.ttl",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
+                    "expectedResults": "",
+                    "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
+                    "id": "CQ001",
+                    "statusNotes": "not readable"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "ontologies": [
-    {
-      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
-      "name": "MusicalPerformance",
-      "userDefined": true
-    }
-  ]
+    ],
+    "ontologies": [
+        {
+            "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+            "name": "MusicalPerformance",
+            "userDefined": true
+        }
+    ]
 }
