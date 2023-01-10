@@ -288,6 +288,8 @@ def getExpectedResultsContent(test):
         return file.read()
     else:
         #return test.get('expectedResults')
+        print(test.get('expectedResults'))
+        print(urlopen(test.get('expectedResults')).read())
         return urlopen(test.get('expectedResults')).read()
 
 # Get data
@@ -297,7 +299,8 @@ def getData(test):
         file = open(dataPath, "r")
         return file.read()
     else:
-        return test.get('data')
+        #return test.get('data')
+        return urlopen(test.get('data')).read()
 
 # Get test ID
 def getID(test):
