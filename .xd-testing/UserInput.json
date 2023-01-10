@@ -9,14 +9,14 @@
           "type": "COMPETENCY_QUESTION",
           "content": "Where was a musical composition performed?",
           "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
+          "status": "success",
           "query": "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/>  PREFIX core: <https://w3id.org/polifonia/ontology/core/> SELECT DISTINCT ?place WHERE { ?composition mp:isInvolvedInMusicalPerformance ?performance . ?performance core:hasPlace ?place } ",
           "data": "",
           "dataFileName": "MusicalPerformance/RecordingSession/datasets/CQ1TD.ttl",
           "expectedResults": "",
           "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
           "id": "CQ001",
-          "check": 1
+          "check": 0
         },
         {
           "type": "ERROR_PROVOCATION",
