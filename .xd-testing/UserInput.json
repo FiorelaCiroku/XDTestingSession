@@ -4,7 +4,20 @@
       "name": "RecordingSession",
       "ontologyName": "MusicalPerformance",
       "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-      "tests": []
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "What is she?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "queryFileName": "MusicalPerformance/RecordingSession/queries/DE1.ttl",
+          "data": "",
+          "dataFileName": "MusicalPerformance/RecordingSession/datasets/DE1.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER1.json",
+          "id": "CQ001"
+        }
+      ]
     }
   ],
   "ontologies": [
