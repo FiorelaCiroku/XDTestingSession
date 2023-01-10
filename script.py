@@ -386,7 +386,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write('\towlunit:hasCompetencyQuestion \"' +
                                     getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
-                                    getData(testData)+'\" ;\n') #.  #getQueryContent(testData)
+                                    getQueryContent(testData)+'\" ;\n') 
                             f.write('\towlunit:hasInputData td:' +
                                     getID(testData)+'TD.ttl ;\n')
                             f.write(
@@ -400,7 +400,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                         
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
-                                getData(testData))
+                                getQueryContent(testData))  # getData(testData))
                             f.close()
                             
                     except Exception as error:
