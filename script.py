@@ -401,9 +401,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             print(f.read())
                             f.close()
                         
-                        tdFilePath = testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl'
-                        print('URL per toy dataset', tdFilePath)
-                        
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData))
