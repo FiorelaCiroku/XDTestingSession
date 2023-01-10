@@ -385,6 +385,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 '\towlunit:hasExpectedResult \"'+getExpectedResultsContent(testData)+'\" ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
+                            print(f.read())
                             f.close()
 
                         with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
