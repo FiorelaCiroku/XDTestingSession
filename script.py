@@ -469,7 +469,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                         print("testFilePath:", testFilePath)
                         with open(testFilePath+'EPTestCase/'+getID(testData)+'.ttl', 'w') as f:
                             f.write(
-                                '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> \n')
+                                '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
                             f.write(
                                 '@prefix ns: <'+ 'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] + '> .\n')
                             f.write('@prefix td: <' +
