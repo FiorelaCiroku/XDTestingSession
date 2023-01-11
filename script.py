@@ -528,18 +528,25 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
         writer.dump(str(testFilePath)+'PassedTests/' +
                     str(getID(testData))+'.md')
     elif result == "FAILED":
+        if getContent(testData) is None:
+            content = ""
+        if getQueryContent(testData) is None:
+            query = ""
+        if getExpectedResultsContent(testData) is None:
+            results = ""
+            
         writer = MarkdownTableWriter(
             headers=["Test case documentation",
-                     "v1"],
+                     "Information"],
             value_matrix=[
                 ["Test case ID", getID(testData)],
                 ["Test category", getTestType(testData)],
-                ["Requirement",   getContent(testData)],
-                ["Test", getQueryContent(testData)],
+                ["Requirement",   content],
+                ["Test", query],
                 ["Input test data", str(folderName) +
                  str(getID(testData))+'TD.ttl'],
-                ["Expected result", getExpectedResultsContent(testData)],
-                ["Actual result", str(error)],
+                ["Expected result", results],
+                ["Actual result", getExpectedResultsContent(testData)],
                 ["Executed on", date.today()],
                 ["Environment", "GITHUB"],
                 ["Execution result", result],
