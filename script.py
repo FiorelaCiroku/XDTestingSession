@@ -464,6 +464,9 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocation/"
+                        
+                        print("testFileLink:", testFileLink)
+                        print("testFilePath:", testFilePath)
                         with open(testFilePath+'/IVTestCase/'+getID(testData)+'.ttl', 'w') as f:
                             f.write(
                                 '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> \n')
@@ -637,8 +640,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
                         print("testFileLink" , testFileLink)
                         print("testFilePath", testFilePath)
-                        linkuImEshte = testFileLink+"EPTestCase/"+getID(fileData)+".ttl"
-                        print(linkuImEshte)
+                        
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(fileData)+".ttl")
