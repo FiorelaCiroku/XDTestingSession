@@ -443,7 +443,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
-                        with open(testFilePath+'/IVDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
+                        with open(testFilePath+'IVDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData))
                             f.close()
@@ -497,67 +497,141 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
             else:
                 print('Test Case and Data Set already Created ')
 
-
 def createTestDocumentation(testFilePath, result, testData, folderName, error="Error"):
     print(testData)
     if result == "PASSED":
-        if getContent(testData) is None:
-            content = ""
-        if getQueryContent(testData) is None:
-            query = ""
-        if getExpectedResultsContent(testData) is None:
-            results = ""
-            
-        writer = MarkdownTableWriter(
-            headers=["Test case documentation",
+        if (getTestType(testData) == 'COMPETENCY_QUESTION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
                      "Information"],
-            value_matrix=[
-                ["Test case ID", getID(testData)],
-                ["Test category", getTestType(testData)],
-                ["Requirement",   content],
-                ["Test", query],
-                ["Input test data", str(folderName) +
-                 str(getID(testData))+'TD.ttl'],
-                ["Expected result", results],
-                ["Actual result", getExpectedResultsContent(testData)],
-                ["Executed on", date.today()],
-                ["Environment", "GITHUB"],
-                ["Execution result", result],
-                ["Execution comment", ""],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Requirement",   getContent(testData)],
+                    ["Test", getQueryContent(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", getExpectedResultsContent(testData)],
+                    ["Actual result", getExpectedResultsContent(testData)],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
 
-            ],
-            margin=1  # add a whitespace for both sides of each cell
-        )
-        writer.dump(str(testFilePath)+'PassedTests/' +
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
+        
+        elif (getTestType(testData) == 'INFERENCE_VERIFICATION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
+                     "Information"],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Requirement",   getContent(testData)],
+                    ["Test", getQueryContent(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", true],
+                    ["Actual result", true],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
+
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
+        
+        elif (getTestType(testData) == 'ERROR_PROVOCATION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
+                     "Information"],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", true],
+                    ["Actual result", true],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
+
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
+            writer.dump(str(testFilePath)+'PassedTests/' +
                     str(getID(testData))+'.md')
-    elif result == "FAILED":
-        if getContent(testData) is None:
-            content = ""
-        if getQueryContent(testData) is None:
-            query = ""
-        if getExpectedResultsContent(testData) is None:
-            results = ""
+                    
             
-        writer = MarkdownTableWriter(
-            headers=["Test case documentation",
+    elif result == "FAILED":  
+        
+        if (getTestType(testData) == 'COMPETENCY_QUESTION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
                      "Information"],
-            value_matrix=[
-                ["Test case ID", getID(testData)],
-                ["Test category", getTestType(testData)],
-                ["Requirement",   content],
-                ["Test", query],
-                ["Input test data", str(folderName) +
-                 str(getID(testData))+'TD.ttl'],
-                ["Expected result", results],
-                ["Actual result", getExpectedResultsContent(testData)],
-                ["Executed on", date.today()],
-                ["Environment", "GITHUB"],
-                ["Execution result", result],
-                ["Execution comment", ""],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Requirement",   getContent(testData)],
+                    ["Test", getQueryContent(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", getExpectedResultsContent(testData)],
+                    ["Actual result", getExpectedResultsContent(testData)],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
 
-            ],
-            margin=1  # add a whitespace for both sides of each cell
-        )
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
+        
+        elif (getTestType(testData) == 'INFERENCE_VERIFICATION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
+                     "Information"],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Requirement",   getContent(testData)],
+                    ["Test", getQueryContent(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", true],
+                    ["Actual result", false],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
+
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
+        
+        elif (getTestType(testData) == 'ERROR_PROVOCATION'):
+            writer = MarkdownTableWriter(
+                headers=["Test case documentation",
+                     "Information"],
+                value_matrix=[
+                    ["Test case ID", getID(testData)],
+                    ["Test category", getTestType(testData)],
+                    ["Input test data", str(folderName) +
+                        str(getID(testData))+'TD.ttl'],
+                    ["Expected result", true],
+                    ["Actual result", false],
+                    ["Executed on", date.today()],
+                    ["Environment", "GITHUB"],
+                    ["Execution result", result],
+                    ["Execution comment", ""],
+
+                ],
+                margin=1  # add a whitespace for both sides of each cell
+            )
         writer.dump(str(testFilePath)+'FailedTests/' +
                     str(getID(testData))+'.md')
 
