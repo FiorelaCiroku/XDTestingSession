@@ -634,17 +634,17 @@ def executeTestCase(fileData, fileName, repoName, token):
                     print("Data : "+getData(testData))
                     try:
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
-                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocation/"
+                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
                         print("testFileLink" , testFileLink)
                         print("testFilePath", testFilePath)
-                        print("Execution command: java -jar OWLUnit-0.3.2.jar --test-case ", testFileLink, "EPTestCase/", getID(fileData), ".ttl")
+                        print("Execution command: java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/", getID(fileData), ".ttl")
                         
                         print('---- Executing Test ----')
                         os.system(
-                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(fileData)+".ttl")
+                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl") #fileData
                         print('---- PASSED ----')
                         createTestDocumentation(
                             testFilePath, "PASSED", testData, "EPDataSet/")
