@@ -498,20 +498,24 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
 def createTestDocumentation(testFilePath, result, testData, folderName, error="Error"):
     print(testData)
     if result == "PASSED":
+        if getContent(testData) is None:
+            content = ""
+        if getQueryContent(testData) is None:
+            query = ""
+        if getExpectedResultsContent(testData) is None:
+            results = ""
+            
         writer = MarkdownTableWriter(
             headers=["Test case documentation",
                      "Information"],
             value_matrix=[
                 ["Test case ID", getID(testData)],
                 ["Test category", getTestType(testData)],
-                if getContent(testData) is not None:
-                    ["Requirement",   getContent(testData)],
-                if getQueryContent(testData) is not None:
-                    ["Test", getQueryContent(testData)],
+                ["Requirement",   content],
+                ["Test", query],
                 ["Input test data", str(folderName) +
                  str(getID(testData))+'TD.ttl'],
-                if getExpectedResultsContent(testData) is not None:
-                    ["Expected result", getExpectedResultsContent(testData)],
+                ["Expected result", results],
                 ["Actual result", getExpectedResultsContent(testData)],
                 ["Executed on", date.today()],
                 ["Environment", "GITHUB"],
