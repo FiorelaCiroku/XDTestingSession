@@ -480,7 +480,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
-                        with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
+                        with open(testFilePath+'/CQDataSet'+getID(testData)+'TD.ttl', 'w') as f: #/CQDataSet/
                             f.write(
                                 getData(testData))
                             f.close()
