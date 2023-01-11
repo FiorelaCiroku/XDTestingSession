@@ -14,7 +14,8 @@
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "statusNotes": "not readable"
+                    "statusNotes": "not readable",
+                    "check": 1
                 },
                 {
                     "type": "COMPETENCY_QUESTION",
@@ -26,7 +27,8 @@
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
-                    "id": "CQ001"
+                    "id": "CQ001",
+                    "check": 1
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
@@ -37,7 +39,8 @@
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
                     "expectedResults": "",
-                    "id": "IV001"
+                    "id": "IV001",
+                    "check": 1
                 }
             ]
         }
