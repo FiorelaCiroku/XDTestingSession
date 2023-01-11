@@ -1,7 +1,7 @@
-@prefix owlunit:<https://w3id.org/OWLunit/ontology/>.
-@prefix ns:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance/RecordingSession/MusicalPerformance2.owl>.
-@prefix td:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQDataSet/>.
-@prefix tc:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/>.
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ns: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance/RecordingSession/MusicalPerformance2.owl> .
+@prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQDataSet/> .
+@prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/> .
 
 tc:CQ001 a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasCompetencyQuestion "Where was a musical composition performed?" ;
