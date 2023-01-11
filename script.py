@@ -397,8 +397,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             
                             f.close()
                         
-                        print(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl')
-                        with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
+                        print(testFilePath+'CQDataSet/'+getID(testData)+'TD.ttl')
+                        with open(testFilePath+'CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f:
                             f.write(
                                 getData(testData)) 
                             f.close()
