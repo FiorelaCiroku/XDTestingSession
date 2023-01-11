@@ -1,41 +1,41 @@
 {
-  "fragments": [
-    {
-      "name": "RecordingSession",
-      "ontologyName": "MusicalPerformance",
-      "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-      "tests": [
+    "fragments": [
         {
-          "type": "ERROR_PROVOCATION",
-          "content": "",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "warning",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
-          "expectedResults": "",
-          "id": "EP001",
-          "statusNotes": "not readable"
-        },
-        {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Who are you?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "running",
-          "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
-          "id": "CQ001"
+            "name": "RecordingSession",
+            "ontologyName": "MusicalPerformance",
+            "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
+            "tests": [
+                {
+                    "type": "ERROR_PROVOCATION",
+                    "content": "",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "warning",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
+                    "expectedResults": "",
+                    "id": "EP001",
+                    "statusNotes": "not readable"
+                },
+                {
+                    "type": "COMPETENCY_QUESTION",
+                    "content": "Who are you?",
+                    "reasoner": "hermiT 1.4.3.456",
+                    "status": "running",
+                    "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
+                    "data": "",
+                    "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
+                    "expectedResults": "",
+                    "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
+                    "id": "CQ001"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "ontologies": [
-    {
-      "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
-      "name": "MusicalPerformance",
-      "userDefined": true
-    }
-  ]
+    ],
+    "ontologies": [
+        {
+            "url": "https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/musical-performance.owl",
+            "name": "MusicalPerformance",
+            "userDefined": true
+        }
+    ]
 }
