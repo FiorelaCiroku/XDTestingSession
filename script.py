@@ -373,13 +373,13 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/CompetencyQuestionVerificationTest/"
                         with open(testFilePath+'/CQTestCase/'+getID(testData)+'.ttl', 'w') as f:
                             f.write(
-                                '@prefix owlunit:<https://w3id.org/OWLunit/ontology/>.\n')
+                                '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
                             f.write(
-                                '@prefix ns:<'+'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] +'>.\n')
-                            f.write('@prefix td:<' +
-                                    testFileLink+'CQDataSet/>.\n')
-                            f.write('@prefix tc:<'+testFileLink +
-                                    'CQTestCase/>.\n\n')
+                                '@prefix ns: <'+'https://raw.githubusercontent.com/'+repoName+'/main/.xd-testing/' + fileData['fragments'][indexFragment]['fileName'] +'> .\n')
+                            f.write('@prefix td: <' +
+                                    testFileLink+'CQDataSet/> .\n')
+                            f.write('@prefix tc: <'+testFileLink +
+                                    'CQTestCase/> .\n\n')
                             f.write('tc:'+getID(testData) +
                                     ' a owlunit:CompetencyQuestionVerification ;\n')
                             f.write('\towlunit:hasCompetencyQuestion \"' +
@@ -580,7 +580,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
                         print('---- Executing Test ----')
                         os.system(
-                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(fileData)+".ttl")
+                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         print('---- PASSED ----')
                         createTestDocumentation(
                             testFilePath, "PASSED", testData, "CQDataSet/")
@@ -609,7 +609,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
                         print('---- Executing Test ----')
                         os.system(
-                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"IVTestCase/"+getID(fileData)+".ttl")
+                            "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"IVTestCase/"+getID(testData)+".ttl")
                         print('---- PASSED ----')
                         createTestDocumentation(
                             testFilePath, "PASSED", testData, "IVDataSet/")
