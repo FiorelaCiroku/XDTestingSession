@@ -14,7 +14,7 @@
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "statusNotes": "[Errno 2] No such file or directory: './XDTesting/MusicalPerformance/RecordingSession/ErrorProvocation/EPTestCase/EP001.ttl'"
+                    "statusNotes": "not readable"
                 }
             ]
         }
