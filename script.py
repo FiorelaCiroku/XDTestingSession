@@ -294,7 +294,7 @@ def getExpectedResultsContent(test):
         return test.get('expectedResults')
         #return urlopen(test.get('expectedResults')).read()
 
-# Get data
+# Get data 
 def getData(test):
     if test.get('data') == "":
         dataPath = '.xd-testing/' + test.get('dataFileName')
@@ -316,7 +316,6 @@ def getReasoner(test):
 def getOntologyUrl(test):
     return test.get("ontologies")[0]['url']
      
-
 # Update test status
 def setCheckValue(filename, value, indexFragment, indexTest):
     data = loadDataFromJsonFile(filename)
@@ -458,6 +457,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
 
                     print("ID : "+getID(testData))
                     print("Data : "+getData(testData))
+                    print("Data is done!")
                     try:
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocation/"
@@ -480,7 +480,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
-                        with open(testFilePath+'/CQDataSet'+getID(testData)+'TD.ttl', 'w') as f: #/CQDataSet/
+                        with open(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
                             f.write(
                                 getData(testData))
                             f.close()
