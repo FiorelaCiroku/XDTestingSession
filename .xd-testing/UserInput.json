@@ -4,7 +4,20 @@
       "name": "RecordingSession",
       "ontologyName": "MusicalPerformance",
       "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
-      "tests": []
+      "tests": [
+        {
+          "type": "COMPETENCY_QUESTION",
+          "content": "Where was a musical composition performed?",
+          "reasoner": "hermiT 1.4.3.456",
+          "status": "running",
+          "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
+          "data": "",
+          "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
+          "expectedResults": "",
+          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
+          "id": "CQ001"
+        }
+      ]
     }
   ],
   "ontologies": [
