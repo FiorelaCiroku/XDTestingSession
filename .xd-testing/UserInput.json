@@ -16,7 +16,8 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
                     "id": "CQ001",
-                    "statusNotes": "not readable"
+                    "statusNotes": "not readable",
+                    "check": 0
                 }
             ]
         }
