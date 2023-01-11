@@ -394,7 +394,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 '\towlunit:hasExpectedResult \"'+getExpectedResultsContent(testData)+'\" ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
-                            print(f.read())
+                            
                             f.close()
                         
                         print(testFilePath+'/CQDataSet/'+getID(testData)+'TD.ttl')
@@ -460,10 +460,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                     print("Data is done!")
                     try:
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
-                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocation/"
+                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
-                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocation/"
+                            " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
                         
                         print("testFileLink:", testFileLink)
                         print("testFilePath:", testFilePath)
