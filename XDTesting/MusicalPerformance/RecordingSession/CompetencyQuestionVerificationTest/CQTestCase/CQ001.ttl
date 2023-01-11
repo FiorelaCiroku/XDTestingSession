@@ -1,7 +1,7 @@
-@prefix owlunit:<https://w3id.org/OWLunit/ontology/>.
-@prefix ns:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance/RecordingSession/MusicalPerformance2.owl>.
-@prefix td:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQDataSet/>.
-@prefix tc:<https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/>.
+@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
+@prefix ns: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/.xd-testing/MusicalPerformance/RecordingSession/MusicalPerformance2.owl> .
+@prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQDataSet/> .
+@prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/RecordingSession/CompetencyQuestionVerificationTest/CQTestCase/> .
 
 tc:CQ001 a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasCompetencyQuestion "Who are you?" ;
@@ -9,6 +9,6 @@ tc:CQ001 a owlunit:CompetencyQuestionVerification ;
 " ;
 	owlunit:hasInputData td:CQ001TD.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
-	owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Florence\" } } ] } }
+	owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/Florence\" } } ] } } "
 " ;
 	owlunit:testsOntology ns: .
