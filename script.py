@@ -286,7 +286,7 @@ def getQueryContent(test):
 
 # Get expected result
 def getExpectedResultsContent(test):
-    if test.get('expectedResults') is None:
+    if test.get('expectedResults') == "":
         testPath = '.xd-testing/' + test.get('expectedResultsFileName')
         file = open(testPath, "r")
         return file.read()
@@ -296,7 +296,7 @@ def getExpectedResultsContent(test):
 
 # Get data
 def getData(test):
-    if test.get('data') is None:
+    if test.get('data') == "":
         dataPath = '.xd-testing/' + test.get('dataFileName')
         file = open(dataPath, "r")
         return file.read()
