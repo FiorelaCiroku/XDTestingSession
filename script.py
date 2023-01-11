@@ -641,7 +641,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print("testFileLink" , testFileLink)
                         print("testFilePath", testFilePath)
                         print("ID eshte: "+getID(testData))
-                        print("Execution command: java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/", getID(fileData), ".ttl")
+                        print("Execution command: java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl")
                         
                         print('---- Executing Test ----')
                         os.system(
