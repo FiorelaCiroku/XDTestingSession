@@ -533,8 +533,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test", getQueryContent(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", true],
-                    ["Actual result", true],
+                    ["Expected result", True],
+                    ["Actual result", True],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -553,8 +553,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test category", getTestType(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", true],
-                    ["Actual result", true],
+                    ["Expected result", True],
+                    ["Actual result", True],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -602,8 +602,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test", getQueryContent(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", true],
-                    ["Actual result", false],
+                    ["Expected result", True],
+                    ["Actual result", False],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -622,8 +622,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test category", getTestType(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", true],
-                    ["Actual result", false],
+                    ["Expected result", True],
+                    ["Actual result", False],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
