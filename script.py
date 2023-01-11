@@ -637,7 +637,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
                         print("testFileLink" , testFileLink)
                         print("testFilePath", testFilePath)
-
+                        print("+testFileLink+"EPTestCase/"+getID(fileData)+".ttl")
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(fileData)+".ttl")
