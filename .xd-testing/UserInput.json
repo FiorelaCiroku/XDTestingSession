@@ -6,19 +6,6 @@
       "fileName": "MusicalPerformance/RecordingSession/MusicalPerformance2.owl",
       "tests": [
         {
-          "type": "COMPETENCY_QUESTION",
-          "content": "Who are you?",
-          "reasoner": "hermiT 1.4.3.456",
-          "status": "success",
-          "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
-          "data": "",
-          "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
-          "expectedResults": "",
-          "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
-          "id": "CQ001",
-          "check": 1
-        },
-        {
           "type": "INFERENCE_VERIFICATION",
           "content": "Hheh?",
           "reasoner": "hermiT 1.4.3.456",
