@@ -9,12 +9,12 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "",
+                    "status": "warning",
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "statusNotes": "",
+                    "statusNotes": "not readable",
                     "check": 0
                 },
                 {
