@@ -428,7 +428,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write('@prefix tc: <'+testFileLink +
                                     'IVTestCase/> .\n\n')
                             f.write('tc:'+getID(testData)+ '.ttl' +
-                                    ' a owlunit:InferenceVerificationTest ;\n')
+                                    ' a owlunit:InferenceVerification ;\n')
                             #f.write('\towlunit:hasCompetencyQuestion \"' +
                             #        getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
