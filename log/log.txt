@@ -17,3 +17,4 @@ ERROR 2023-01-18 16:09:07,628 [main] (ErrorHandlerFactory.java:106) - [line: 12,
  INFO 2023-01-18 16:09:07,856 [main] (OWLUnit.java:89) - Test case URI https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/ErrorProvocationTest/EPTestCase/EP001.ttl
  INFO 2023-01-18 16:15:06,455 [main] (OWLUnit.java:89) - Test case URI https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/InferenceVerificationTest/IVTestCase/IV001.ttl
 ERROR 2023-01-18 16:15:09,564 [main] (ErrorHandlerFactory.java:106) - [line: 12, col: 37] Triples not terminated by DOT
+ INFO 2023-01-18 16:22:39,094 [main] (OWLUnit.java:89) - Test case URI https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/InferenceVerificationTest/IVTestCase/IV001.ttl
