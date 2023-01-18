@@ -429,8 +429,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     'IVTestCase/> .\n\n')
                             f.write('tc:'+getID(testData)+ '.ttl' +
                                     ' a owlunit:InferenceVerificationTest ;\n')
-                            f.write('\towlunit:hasCompetencyQuestion \"' +
-                                    getContent(testData)+'\" ;\n')
+                            #f.write('\towlunit:hasCompetencyQuestion \"' +
+                            #        getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
                                     getQueryContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasInputData td:' +
@@ -440,7 +440,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:hasExpectedResult true ;\n')
                             f.write(
-                                '\towlunit:hasReasoner owlunit:'+getReasoner(testData)+' ;\n')
+                                #'\towlunit:hasReasoner owlunit:'+getReasoner(testData)+' ;\n')
+                                '\towlunit:hasReasoner owlunit:HermiT' ;\n') 
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
