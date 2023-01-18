@@ -429,14 +429,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     'IVTestCase/> .\n\n')
                             f.write('tc:'+getID(testData)+ '.ttl' +
                                     ' a owlunit:InferenceVerification ;\n')
-                            #f.write('\towlunit:hasCompetencyQuestion \"' +
-                            #        getContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasSPARQLUnitTest \"' +
                                     getQueryContent(testData)+'\" ;\n')
                             f.write('\towlunit:hasInputData td:' +
                                     getID(testData)+'TD.ttl ;\n')
-                            f.write(
-                                '\towlunit:hasInputTestDataCategory owlunit:ToyDataset ;\n')
                             f.write(
                                 '\towlunit:hasExpectedResult true ;\n')
                             f.write(
