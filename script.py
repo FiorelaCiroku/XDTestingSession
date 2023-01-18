@@ -563,12 +563,10 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 ],
                 margin=1  # add a whitespace for both sides of each cell
             )
-            writer.dump(str(testFilePath)+'PassedTests/' +
-                    str(getID(testData))+'.md')
+        writer.dump(str(testFilePath)+'PassedTests/' + str(getID(testData))+'.md')
                     
             
     elif result == "FAILED":  
-        
         if (getTestType(testData) == 'COMPETENCY_QUESTION'):
             writer = MarkdownTableWriter(
                 headers=["Test case documentation",
@@ -632,8 +630,7 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 ],
                 margin=1  # add a whitespace for both sides of each cell
             )
-        writer.dump(str(testFilePath)+'FailedTests/' +
-                    str(getID(testData))+'.md')
+        writer.dump(str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md')
 
 
 def executeTestCase(fileData, fileName, repoName, token):
