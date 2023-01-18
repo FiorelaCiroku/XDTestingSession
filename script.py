@@ -660,8 +660,12 @@ def executeTestCase(fileData, fileName, repoName, token):
                             testFilePath, "PASSED", testData, "CQDataSet/")
                         setCheckValue(fileName, 1,
                                       indexFragment, indexTest)
+                        setStatusValue(fileName, 'success',
+                                       indexFragment, indexTest)
                     except Exception as error:
                         print('---- FAILED----')
+                        setStatusValue(fileName, 'fail',
+                                       indexFragment, indexTest)
 
                         data = {"title": getID(fileData), "body": error}
                         try:
@@ -689,8 +693,12 @@ def executeTestCase(fileData, fileName, repoName, token):
                             testFilePath, "PASSED", testData, "IVDataSet/")
                         setCheckValue(fileName, 1,
                                       indexFragment, indexTest)
+                        setStatusValue(fileName, 'success',
+                                       indexFragment, indexTest)
                     except Exception as error:
                         print('---- FAILED----')
+                        setStatusValue(fileName, 'fail',
+                                       indexFragment, indexTest)
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -725,9 +733,12 @@ def executeTestCase(fileData, fileName, repoName, token):
                             testFilePath, "PASSED", testData, "EPDataSet/")
                         setCheckValue(fileName, 1,
                                       indexFragment, indexTest)
+                        setStatusValue(fileName, 'success',
+                                       indexFragment, indexTest)
                     except Exception as error:
                         print('---- FAILED----')
-
+                        setStatusValue(fileName, 'fail',
+                                       indexFragment, indexTest)
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
