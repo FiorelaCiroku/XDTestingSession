@@ -9,38 +9,38 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
+                    "status": "",
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/errorDataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "statusNotes": "not readable",
-                    "check": 1
+                    "statusNotes": "",
+                    "check": 0
                 },
                 {
                     "type": "COMPETENCY_QUESTION",
                     "content": "Who are you?",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "running",
+                    "status": "",
                     "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/RecordingSession/expectedResults/ER.json",
                     "id": "CQ001",
-                    "check": 1
+                    "check": 0
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
                     "content": "Hheh?",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "running",
+                    "status": "",
                     "queryFileName": "MusicalPerformance/RecordingSession/queries/SPARQL.txt",
                     "data": "",
                     "dataFileName": "MusicalPerformance/RecordingSession/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 1
+                    "check": 0
                 }
             ]
         }
