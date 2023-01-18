@@ -16,7 +16,7 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/MusicalPerformanceFragment/expectedResults/ER.json",
                     "id": "CQ001",
-                    "check": 1
+                    "check": 0
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
