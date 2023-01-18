@@ -440,8 +440,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:hasExpectedResult true ;\n')
                             f.write(
-                                #'\towlunit:hasReasoner owlunit:'+getReasoner(testData)+' ;\n')
-                                '\towlunit:hasReasoner owlunit:HermiT' ;\n') 
+                                '\towlunit:hasReasoner owlunit:HermiT ;\n')  # '\towlunit:hasReasoner owlunit:'+getReasoner(testData)+' ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
