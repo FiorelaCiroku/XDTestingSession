@@ -3,6 +3,6 @@
 @prefix td: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/ErrorProvocationTest/EPDataSet/> .
 @prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/ErrorProvocationTest/EPTestCase/> .
 
-tc:EP001 a owlunit:ErrorProvocation ;
+tc:EP001.ttl a owlunit:ErrorProvocation ;
 	owlunit:hasInputData td:EP001TD.ttl ;
 	owlunit:testsOntology ns: .
