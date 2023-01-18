@@ -380,7 +380,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     testFileLink+'CQDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
                                     'CQTestCase/> .\n\n')
-                            f.write('tc:'+getID(testData) +
+                            f.write('tc:'+getID(testData)+'.ttl' +
                                     ' a owlunit:CompetencyQuestionVerification ;\n')
                             f.write('\towlunit:hasCompetencyQuestion \"' +
                                     getContent(testData)+'\" ;\n')
@@ -391,7 +391,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:hasInputTestDataCategory owlunit:ToyDataset ;\n')
                             f.write(
-                                '\towlunit:hasExpectedResult \"'+getExpectedResultsContent(testData)+'\" ;\n')
+                                '\towlunit:hasExpectedResult \"' + 
+                                    getExpectedResultsContent(testData)+'\" ;\n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             
@@ -426,7 +427,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     testFileLink+'IVDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
                                     'IVTestCase/> .\n\n')
-                            f.write('tc:'+getID(testData) +
+                            f.write('tc:'+getID(testData)+ '.ttl' +
                                     ' a owlunit:InferenceVerificationTest ;\n')
                             f.write('\towlunit:hasCompetencyQuestion \"' +
                                     getContent(testData)+'\" ;\n')
@@ -476,7 +477,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     testFileLink+'EPDataSet/> .\n')
                             f.write('@prefix tc: <'+testFileLink +
                                     'EPTestCase/> .\n\n')
-                            f.write('tc:'+getID(testData) +
+                            f.write('tc:'+getID(testData) + '.ttl' +
                                     ' a owlunit:ErrorProvocation ;\n')
                             f.write('\towlunit:hasInputData td:' +
                                     getID(testData)+'TD.ttl ;\n')
