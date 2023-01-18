@@ -28,7 +28,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 0
+                    "check": 1
                 },
                 {
                     "type": "ERROR_PROVOCATION",
