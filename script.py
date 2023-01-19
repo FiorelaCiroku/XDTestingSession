@@ -526,7 +526,6 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 value_matrix=[
                     ["Test case ID", getID(testData)],
                     ["Test category", getTestType(testData)],
-                    ["Requirement",   getContent(testData)],
                     ["Test", getQueryContent(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
@@ -593,7 +592,6 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 value_matrix=[
                     ["Test case ID", getID(testData)],
                     ["Test category", getTestType(testData)],
-                    ["Requirement",   getContent(testData)],
                     ["Test", getQueryContent(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
@@ -669,6 +667,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
 
@@ -701,6 +701,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
 
@@ -741,8 +743,11 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
+                            
 
             else:
                 print('Test already Executed')
