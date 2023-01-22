@@ -545,8 +545,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test category", getTestType(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", True],
-                    ["Actual result", True],
+                    ["Expected result", False],
+                    ["Actual result", False],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -611,8 +611,8 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Test category", getTestType(testData)],
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
-                    ["Expected result", True],
-                    ["Actual result", False],
+                    ["Expected result", False],
+                    ["Actual result", True],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -644,12 +644,16 @@ def executeTestCase(fileData, fileName, repoName, token):
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         print('---- PASSED ----')
-                        createTestDocumentation(
-                            testFilePath, "PASSED", testData, "CQDataSet/")
-                        setCheckValue(fileName, 1,
-                                      indexFragment, indexTest)
-                        setStatusValue(fileName, 'success',
+                        try: 
+                            createTestDocumentation(
+                                testFilePath, "PASSED", testData, "CQDataSet/")
+                            #setCheckValue(fileName, 1,
+                            #          indexFragment, indexTest)
+                            setStatusValue(fileName, 'fail',
                                        indexFragment, indexTest)
+                        except Exception as error:
+                            print("Error : "+error)
+                            
                     except Exception as error:
                         print('---- FAILED----')
                         setStatusValue(fileName, 'fail',
