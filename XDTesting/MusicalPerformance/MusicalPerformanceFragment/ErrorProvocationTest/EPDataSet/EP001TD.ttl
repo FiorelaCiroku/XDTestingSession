@@ -1,6 +1,7 @@
 @prefix td: <https://raw.githubusercontent.com/polifonia-project/musical-performance/main/test/competency-question/toy-dataset/> .
 @prefix mp: <https://w3id.org/polifonia/ontology/musical-performance/> .
 @prefix core: <https://w3id.org/polifonia/ontology/core/> .
+@prefix core: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/> .
 
 td:Toxicity mp:isInvolvedInMusicalPerformance td:SystemOfADown-FirenzeRocks2017 .
-td:SystemOfADown-FirenzeRocks2017 core:hasPlace td:Florence .
+td:SystemOfADown-FirenzeRocks2017 a mp:Release . 
