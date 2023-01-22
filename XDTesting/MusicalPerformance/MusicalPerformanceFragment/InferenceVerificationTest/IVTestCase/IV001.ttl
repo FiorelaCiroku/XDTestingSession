@@ -4,7 +4,7 @@
 @prefix tc: <https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/InferenceVerificationTest/IVTestCase/> .
 
 tc:IV001.ttl a owlunit:InferenceVerification ;
-	owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/inference/toy-dataset/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> ASK { td:SystemOfADown-FirenzeRocks2017 a mp:MusicalPerformance . }" ;
+	owlunit:hasSPARQLUnitTest "PREFIX mp: <https://w3id.org/polifonia/ontology/musical-performance/> PREFIX td: <https://raw.githubusercontent.com/polifonia-project/musical-performance-ontology/main/test/inference/toy-dataset/> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ASK { td:SystemOfADown-FirenzeRocks2017 a mp:MusicalPerformance . }" ;
 	owlunit:hasInputData td:IV001TD.ttl ;
 	owlunit:hasExpectedResult true ;
 	owlunit:hasReasoner owlunit:HermiT ;
