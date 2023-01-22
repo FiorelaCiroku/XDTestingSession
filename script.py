@@ -451,10 +451,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                             indexFragment, indexTest)
 
                 elif (getTestType(testData) == 'ERROR_PROVOCATION'):
-
-                    print("ID : "+getID(testData))
-                    print("Data : "+getData(testData))
-                    print("Data is done!")
                     try:
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
@@ -667,7 +663,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
+                            setStatusValue(fileName, 'fail',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -701,7 +697,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
+                            setStatusValue(fileName, 'fail',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -743,7 +739,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
+                            setStatusValue(fileName, 'fail',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
