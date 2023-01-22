@@ -644,21 +644,15 @@ def executeTestCase(fileData, fileName, repoName, token):
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         print('---- PASSED ----')
-                        try: 
-                            createTestDocumentation(
-                                testFilePath, "PASSED", testData, "CQDataSet/")
-                            #setCheckValue(fileName, 1,
-                            #          indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
-                                       indexFragment, indexTest)
-                        except Exception as error:
-                            print("Error : "+error)
+                        createTestDocumentation(
+                            testFilePath, "PASSED", testData, "CQDataSet/")
+                        #setCheckValue(fileName, 1,
+                        #          indexFragment, indexTest)
+                        setStatusValue(fileName, 'success',
+                                   indexFragment, indexTest)
                             
                     except Exception as error:
                         print('---- FAILED----')
-                        setStatusValue(fileName, 'fail',
-                                       indexFragment, indexTest)
-
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -667,7 +661,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'fail',
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -691,8 +685,6 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                     except Exception as error:
                         print('---- FAILED----')
-                        setStatusValue(fileName, 'fail',
-                                       indexFragment, indexTest)
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -701,7 +693,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'fail',
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -730,8 +722,6 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                     except Exception as error:
                         print('---- FAILED----')
-                        setStatusValue(fileName, 'fail',
-                                       indexFragment, indexTest)
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -740,12 +730,10 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'fail',
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
-                            
-
             else:
                 print('Test already Executed')
 
