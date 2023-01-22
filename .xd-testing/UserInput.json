@@ -16,7 +16,7 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/MusicalPerformanceFragment/expectedResults/ER.json",
                     "id": "CQ001",
-                    "check": 0
+                    "check": 1
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
@@ -28,19 +28,19 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 0
+                    "check": 1
                 },
                 {
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
+                    "status": "success",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
                     "statusNotes": "not readable",
-                    "check": 0
+                    "check": 1
                 }
             ]
         }
