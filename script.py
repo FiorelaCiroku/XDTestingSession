@@ -649,7 +649,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                 testFilePath, "PASSED", testData, "CQDataSet/")
                             #setCheckValue(fileName, 1,
                             #          indexFragment, indexTest)
-                            setStatusValue(fileName, 'fail',
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -716,9 +716,6 @@ def executeTestCase(fileData, fileName, repoName, token):
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
-                        print("testFileLink" , testFileLink)
-                        print("testFilePath", testFilePath)
-                        print("ID eshte: "+getID(testData))
                         print("Execution command: java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl")
                         
                         print('---- Executing Test ----')
