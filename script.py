@@ -392,9 +392,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 '\towlunit:hasInputTestDataCategory owlunit:ToyDataset ;\n')
                             f.write(
                                 '\towlunit:hasExpectedResult \"' + 
-                                    getExpectedResultsContent(testData))
-                            f.write(
-                                '\"; \n')
+                                    getExpectedResultsContent(testData).replace("\n", "") + '\"; \n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             
