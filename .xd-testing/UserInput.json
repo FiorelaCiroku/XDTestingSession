@@ -33,12 +33,13 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "success",
+                    "status": "warning",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "check": 0
+                    "check": 0,
+                    "statusNotes": "not readable"
                 }
             ]
         }
