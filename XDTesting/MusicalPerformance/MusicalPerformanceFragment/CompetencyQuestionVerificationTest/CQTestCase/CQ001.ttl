@@ -9,5 +9,5 @@ tc:CQ001.ttl a owlunit:CompetencyQuestionVerification ;
 	owlunit:hasInputData td:CQ001TD.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{\"head\": {  \"vars\": [  \"place\" ] } ,  \"results\": {  \"bindings\": [ {  \"place\": {  \"type\":  \"uri\" ,  \"value\":  \"https://raw.githubusercontent.com/FiorelaCiroku/XDTestingSession/main/XDTesting/MusicalPerformance/MusicalPerformanceFragment/CompetencyQuestionVerificationTest/CQDataSet/Florence\" } } ] } }
-";
+"; 
 	owlunit:testsOntology ns: .
