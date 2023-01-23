@@ -518,10 +518,11 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getData(testData))
                                 f.close()
                         else:
+                            print("Dataset not correct!")
                             with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
                                 f.write("")
                                 f.close()
-                            setStatusNotesValue(fileName, 'Dataset not correct!',
+                            setStatusNotesValue(fileName, "Dataset not correct!",
                                        indexFragment, indexTest)
                                 
                     except Exception as error:
