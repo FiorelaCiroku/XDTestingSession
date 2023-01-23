@@ -36,13 +36,13 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
+                    "status": "failed",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
                     "check": 0,
-                    "statusNotes": "can only concatenate str (not \"FileNotFoundError\") to str"
+                    "statusNotes": "Executed"
                 }
             ]
         }
