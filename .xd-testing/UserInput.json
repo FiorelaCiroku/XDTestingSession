@@ -36,12 +36,12 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
+                    "status": "failed",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/EPData.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "statusNotes": "[Errno 2] No such file or directory: '.xd-testing/MusicalPerformance/MusicalPerformanceFragment/datasets/EPData.ttl'"
+                    "statusNotes": "Executed"
                 }
             ]
         }
