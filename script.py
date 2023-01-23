@@ -644,6 +644,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                   indexFragment, indexTest)
                         setStatusValue(fileName, 'success',
                                    indexFragment, indexTest)
+                        etStatusNotesValue(fileName, "Executed",
+                                            indexFragment, indexTest)
                             
                     except Exception as error:
                         print('---- FAILED----')
@@ -657,6 +659,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                 fileName, 0, indexFragment, indexTest)
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                            indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
 
