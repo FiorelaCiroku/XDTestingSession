@@ -637,7 +637,7 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 margin=1  # add a whitespace for both sides of each cell
             )
         newFilePath = str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md'
-        createVersionedDocumentation(newFilePath)
+        newFilePath = createVersionedDocumentation(newFilePath)
         writer.dump(newFilePath)
         #writer.dump(str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md')
 
