@@ -823,8 +823,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, response,
-                                            indexFragment, indexTest)
+                            #setStatusNotesValue(fileName, response,
+                            #                indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
             else:
