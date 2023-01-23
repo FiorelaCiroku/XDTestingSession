@@ -376,6 +376,17 @@ def createVersionedDocumentation(file_name):
             new_file.write("")    
         return file_name
 
+# Validate dataset file
+def validateDatasetSyntax(filepath):
+    try:
+        g = rdflib.Graph()
+        g.parse(filepath, format="turtle")
+        return True
+    except Exception as error:
+        print("Error - " + error)
+        return error
+
+
 # Create test case and data set file
 def createTestCaseAndDataSetFile(fileData, fileName, repoName):
     for indexFragment in range(len(fileData['fragments'])):
@@ -493,10 +504,13 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
-                        with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
-                            f.write(
-                                getData(testData))
-                            f.close()
+                        
+                        if validateDatasetSyntax(getData(testData)) == True:
+                            with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
+                                f.write(
+                                    getData(testData))
+                                f.close()
+                                
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
                                        indexFragment, indexTest)
