@@ -685,7 +685,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"IVTestCase/"+getID(testData)+".ttl")
-                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
+                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"IVTestCase/"+getID(testData)+".ttl", shell=True)
                         
                         if "PASSED" in testOutcome.decode("utf-8"):
                             print('---- PASSED ----')
@@ -733,7 +733,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl") #fileData
-                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
+                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl", shell=True)
                         
                         if "PASSED" in testOutcome.decode("utf-8"):
                             print('---- PASSED ----')
