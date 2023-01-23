@@ -15,7 +15,8 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/MusicalPerformanceFragment/expectedResults/ER.json",
-                    "id": "CQ001"
+                    "id": "CQ001",
+                    "check": 1
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
