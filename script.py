@@ -506,7 +506,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                             f.close()
                         
                         if validateDatasetSyntax(getData(testData)) == True:
-                            with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
+                            newFilePath = testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl'
+                            newFilePath = createVersionedDocumentation(newFilePath)
+                            #with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
+                            with open(newFilePath, 'w') as f: 
                                 f.write(
                                     getData(testData))
                                 f.close()
