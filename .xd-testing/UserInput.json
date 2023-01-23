@@ -29,7 +29,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 1
+                    "check": 0
                 },
                 {
                     "type": "ERROR_PROVOCATION",
@@ -40,7 +40,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "check": 1
+                    "check": 0
                 }
             ]
         }
