@@ -356,7 +356,6 @@ def setStatusNotesValue(filename, value, indexFragment, indexTest):
         json_file.close()
 
 # Create versioned files
-
 def createVersionedDocumentation(file_name):
     if os.path.isfile(file_name):
         # Get the file name and extension
@@ -370,12 +369,12 @@ def createVersionedDocumentation(file_name):
             i += 1
         # Create the new file
         with open(new_file_name, "w") as new_file:
-            new_file.write("This is the new file.")
-        print(f"A new file with the name {new_file_name} has been created.")
+            new_file.write("")
+        return new_file_name
     else:
         with open(file_name, "w") as new_file:
-            new_file.write("This is the new file.")    
-    return new_file
+            new_file.write("")    
+        return file_name
 
 # Create test case and data set file
 def createTestCaseAndDataSetFile(fileData, fileName, repoName):
