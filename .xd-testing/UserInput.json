@@ -30,7 +30,7 @@
                     "expectedResults": "",
                     "id": "IV001",
                     "check": 0,
-                    "statusNotes": "local variable 'error' referenced before assignment"
+                    "statusNotes": "{'title': None, 'body': UnboundLocalError(\"local variable 'error' referenced before assignment\")}"
                 },
                 {
                     "type": "ERROR_PROVOCATION",
@@ -42,7 +42,7 @@
                     "expectedResults": "",
                     "id": "EP001",
                     "check": 0,
-                    "statusNotes": "local variable 'error' referenced before assignment"
+                    "statusNotes": "{'title': None, 'body': UnboundLocalError(\"local variable 'error' referenced before assignment\")}"
                 }
             ]
         }
