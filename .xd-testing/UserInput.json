@@ -30,7 +30,7 @@
                     "expectedResults": "",
                     "id": "IV001",
                     "check": 0,
-                    "statusNotes": "<Response [401]>"
+                    "statusNotes": "Executed"
                 },
                 {
                     "type": "ERROR_PROVOCATION",
@@ -42,7 +42,7 @@
                     "expectedResults": "",
                     "id": "EP001",
                     "check": 0,
-                    "statusNotes": "<Response [401]>"
+                    "statusNotes": "Executed"
                 }
             ]
         }
