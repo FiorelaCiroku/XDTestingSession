@@ -518,7 +518,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getData(testData))
                                 f.close()
                         else:
-                            setStatusValue(fileName, 'warning',
+                            setStatusNotesValue(fileName, 'Dataset not correct!',
                                        indexFragment, indexTest)
                                 
                     except Exception as error:
@@ -673,8 +673,8 @@ def executeTestCase(fileData, fileName, repoName, token):
 
     for indexFragment in range(len(fileData['fragments'])):
         for indexTest in range(len(fileData['fragments'][indexFragment]['tests'])):
-            if getStatusValue(fileData, indexFragment, indexTest) != "warning":
-            #if (getCheckValue(fileData, indexFragment, indexTest) is None or getCheckValue(fileData, indexFragment, indexTest) == 0):
+            #if getStatusValue(fileData, indexFragment, indexTest) != "warning":
+            if (getCheckValue(fileData, indexFragment, indexTest) is None or getCheckValue(fileData, indexFragment, indexTest) == 0):
                 testData = fileData['fragments'][indexFragment]['tests'][indexTest]
                 if (getTestType(testData) == 'COMPETENCY_QUESTION'):
                     try:
@@ -808,8 +808,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                 testFilePath, "FAILED", testData, "EPDataSet/")
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
-                            setStatusNotesValue(fileName, "Executed",
-                                   indexFragment, indexTest)
+                            #setStatusNotesValue(fileName, "Executed",
+                            #       indexFragment, indexTest)
                             
                     except Exception as error:
                         print('---- ERROR----')
