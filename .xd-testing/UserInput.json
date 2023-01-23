@@ -16,8 +16,7 @@
                     "expectedResults": "",
                     "expectedResultsFileName": "MusicalPerformance/MusicalPerformanceFragment/expectedResults/ER.json",
                     "id": "CQ001",
-                    "check": 1,
-                    "statusNotes": "Executed"
+                    "check": 0
                 },
                 {
                     "type": "INFERENCE_VERIFICATION",
@@ -29,8 +28,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 0,
-                    "statusNotes": "<Response [401]>"
+                    "check": 0
                 },
                 {
                     "type": "ERROR_PROVOCATION",
@@ -41,8 +39,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "EP001",
-                    "check": 0,
-                    "statusNotes": "<Response [401]>"
+                    "check": 0
                 }
             ]
         }
