@@ -355,6 +355,28 @@ def setStatusNotesValue(filename, value, indexFragment, indexTest):
                   separators=(',', ': '))
         json_file.close()
 
+# Create versioned files
+
+def createVersionedDocumentation(file_name):
+    if os.path.isfile(file_name):
+        # Get the file name and extension
+        base_name, file_ext = os.path.splitext(file_name)
+        # Create a new file name with the same name but a different version
+        new_file_name = base_name + "-v2" + file_ext
+        # Check if the new file already exists
+        i = 2
+        while os.path.isfile(new_file_name):
+            new_file_name = base_name + "-v" + str(i) + file_ext
+            i += 1
+        # Create the new file
+        with open(new_file_name, "w") as new_file:
+            new_file.write("This is the new file.")
+        print(f"A new file with the name {new_file_name} has been created.")
+    else:
+        with open(file_name, "w") as new_file:
+            new_file.write("This is the new file.")    
+    return new_file
+
 # Create test case and data set file
 def createTestCaseAndDataSetFile(fileData, fileName, repoName):
     for indexFragment in range(len(fileData['fragments'])):
@@ -615,7 +637,10 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                 ],
                 margin=1  # add a whitespace for both sides of each cell
             )
-        writer.dump(str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md')
+        newFilePath = str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md'
+        createVersionedDocumentation(newFilePath)
+        writer.dump(newFilePath)
+        #writer.dump(str(testFilePath)+'FailedTests/' + str(getID(testData))+'.md')
 
 
 def executeTestCase(fileData, fileName, repoName, token):
