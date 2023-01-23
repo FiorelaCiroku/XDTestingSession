@@ -673,7 +673,7 @@ def executeTestCase(fileData, fileName, repoName, token):
 
     for indexFragment in range(len(fileData['fragments'])):
         for indexTest in range(len(fileData['fragments'][indexFragment]['tests'])):
-            if getStatusValue(fileData, indexFragment, indexTest) != "warning"):
+            if getStatusValue(fileData, indexFragment, indexTest) != "warning":
             #if (getCheckValue(fileData, indexFragment, indexTest) is None or getCheckValue(fileData, indexFragment, indexTest) == 0):
                 testData = fileData['fragments'][indexFragment]['tests'][indexTest]
                 if (getTestType(testData) == 'COMPETENCY_QUESTION'):
