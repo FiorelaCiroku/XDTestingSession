@@ -655,7 +655,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         elif "FAILED" in testOutcome.decode("utf-8"):
                             print('---- FAILED----')
                             createTestDocumentation(
-                                testFilePath, "FAILED", testData, "CQDataSet/", error)
+                                testFilePath, "FAILED", testData, "CQDataSet/") #testFilePath, "FAILED", testData, "CQDataSet/", error)
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                             setStatusNotesValue(fileName, "Executed",
@@ -704,7 +704,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         elif "FAILED" in testOutcome.decode("utf-8"):
                             print('---- FAILED----')
                             createTestDocumentation(
-                                testFilePath, "FAILED", testData, "IVDataSet/", error)
+                                testFilePath, "FAILED", testData, "IVDataSet/")
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                             setStatusNotesValue(fileName, "Executed",
@@ -756,7 +756,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         elif "FAILED" in testOutcome.decode("utf-8"):
                             print('---- FAILED----')
                             createTestDocumentation(
-                                testFilePath, "FAILED", testData, "EPDataSet/", error)
+                                testFilePath, "FAILED", testData, "EPDataSet/")
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
                             setStatusNotesValue(fileName, "Executed",
