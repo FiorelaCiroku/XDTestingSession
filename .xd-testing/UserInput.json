@@ -29,13 +29,14 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 0
+                    "check": 0,
+                    "statusNotes": "Executed"
                 },
                 {
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "warning",
+                    "status": "failed",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/EPData.ttl",
                     "expectedResults": "",
