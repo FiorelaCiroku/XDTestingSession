@@ -643,7 +643,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
                         print(testOutcome)
                         
-                        if "PASSED" in testOutcome:
+                        if "PASSED" not in testOutcome:
                             print('---- PASSED ----')
                             createTestDocumentation(
                                 testFilePath, "PASSED", testData, "CQDataSet/")
@@ -653,6 +653,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                    indexFragment, indexTest)
                             setStatusNotesValue(fileName, "Executed",
                                    indexFragment, indexTest)
+                            
                         elif "FAILED" in testOutcome:
                             print('---- FAILED----')
                             createTestDocumentation(
