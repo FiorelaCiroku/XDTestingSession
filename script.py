@@ -344,6 +344,13 @@ def setStatusValue(filename, value, indexFragment, indexTest):
                   separators=(',', ': '))
         json_file.close()
 
+# Get status value
+def getStatusValue(data, indexFragment, indexTest):
+    try:
+        return data['fragments'][indexFragment]['tests'][indexTest]['status']
+    except:
+        return None
+
 # Set status notes
 def setStatusNotesValue(filename, value, indexFragment, indexTest):
     data = loadDataFromJsonFile(filename)
@@ -666,7 +673,8 @@ def executeTestCase(fileData, fileName, repoName, token):
 
     for indexFragment in range(len(fileData['fragments'])):
         for indexTest in range(len(fileData['fragments'][indexFragment]['tests'])):
-            if (getCheckValue(fileData, indexFragment, indexTest) is None or getCheckValue(fileData, indexFragment, indexTest) == 0):
+            if getStatusValue(fileData, indexFragment, indexTest) != "warning"):
+            #if (getCheckValue(fileData, indexFragment, indexTest) is None or getCheckValue(fileData, indexFragment, indexTest) == 0):
                 testData = fileData['fragments'][indexFragment]['tests'][indexTest]
                 if (getTestType(testData) == 'COMPETENCY_QUESTION'):
                     try:
