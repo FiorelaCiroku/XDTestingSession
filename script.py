@@ -637,15 +637,23 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
-                        print('---- PASSED ----')
-                        createTestDocumentation(
-                            testFilePath, "PASSED", testData, "CQDataSet/")
-                        setCheckValue(fileName, 1,
+                        testOutcome = os.system("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
+                        if "PASSED" in testOutcome:
+                            print('---- PASSED ----')
+                            createTestDocumentation(
+                                testFilePath, "PASSED", testData, "CQDataSet/")
+                            setCheckValue(fileName, 1,
                                   indexFragment, indexTest)
-                        setStatusValue(fileName, 'success',
+                            setStatusValue(fileName, 'success',
                                    indexFragment, indexTest)
-                        etStatusNotesValue(fileName, "Executed",
-                                            indexFragment, indexTest)
+                            #setStatusNotesValue(fileName, "Executed",
+                            #               indexFragment, indexTest)
+                        elif "FAILED" in testOutcome:
+                            print('---- FAILED----')
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "CQDataSet/", error)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                             
                     except Exception as error:
                         print('---- FAILED----')
