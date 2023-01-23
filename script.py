@@ -511,7 +511,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getData(testData))
                                 f.close()
                         else:
-                            print("Syntax error with the dataset!")
+                            setStatusValue(fileName, 'warning',
+                                       indexFragment, indexTest)
                                 
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
