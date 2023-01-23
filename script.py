@@ -637,8 +637,9 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
-                        testOutcome = os.system("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
+                        testOutcome = os.popen('java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl').read()
                         print("testOutcome IS ", testOutcome)
+                        
                         if "CQ Verification test PASSED" == testOutcome:
                             print('---- PASSED ----')
                             createTestDocumentation(
