@@ -512,18 +512,10 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 '\towlunit:testsOntology ns: .\n')
                             f.close()
                         
-                        if validateDatasetSyntax(getData(testData)) == True:
-                            with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
-                                f.write(
-                                    getData(testData))
-                                f.close()
-                        else:
-                            print("Dataset not correct!")
-                            with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
-                                f.write("")
-                                f.close()
-                            setStatusNotesValue(fileName, "Dataset not correct!",
-                                       indexFragment, indexTest)
+                        with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
+                            f.write(
+                                getData(testData))
+                            f.close()
                                 
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
@@ -812,8 +804,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                 testFilePath, "FAILED", testData, "EPDataSet/")
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
-                            #setStatusNotesValue(fileName, "Executed",
-                            #       indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
                             
                     except Exception as error:
                         print('---- ERROR----')
@@ -827,8 +819,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            #setStatusNotesValue(fileName, response,
-                            #                indexFragment, indexTest)
+                            setStatusNotesValue(fileName, response,
+                                            indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
             else:
