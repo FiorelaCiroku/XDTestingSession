@@ -638,7 +638,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         testOutcome = os.system("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
-                        if "PASSED" in testOutcome:
+                        print("testOutcome IS ", testOutcome)
+                        if "CQ Verification test PASSED" == testOutcome:
                             print('---- PASSED ----')
                             createTestDocumentation(
                                 testFilePath, "PASSED", testData, "CQDataSet/")
@@ -648,7 +649,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                    indexFragment, indexTest)
                             #setStatusNotesValue(fileName, "Executed",
                             #               indexFragment, indexTest)
-                        elif "FAILED" in testOutcome:
+                        elif "CQ Verification test FAILED" in testOutcome:
                             print('---- FAILED----')
                             createTestDocumentation(
                                 testFilePath, "FAILED", testData, "CQDataSet/", error)
