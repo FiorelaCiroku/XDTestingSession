@@ -36,7 +36,7 @@
                     "type": "ERROR_PROVOCATION",
                     "content": "",
                     "reasoner": "hermiT 1.4.3.456",
-                    "status": "failed",
+                    "status": "warning",
                     "data": "",
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/EPData.ttl",
                     "expectedResults": "",
