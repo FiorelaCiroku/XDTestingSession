@@ -565,7 +565,7 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
                     ["Expected result", getExpectedResultsContent(testData)],
-                    ["Actual result", "Error",
+                    ["Actual result", error],
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
