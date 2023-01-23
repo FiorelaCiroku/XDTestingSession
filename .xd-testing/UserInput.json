@@ -29,8 +29,7 @@
                     "dataFileName": "MusicalPerformance/MusicalPerformanceFragment/datasets/dataset.ttl",
                     "expectedResults": "",
                     "id": "IV001",
-                    "check": 0,
-                    "statusNotes": "Executed"
+                    "check": 0
                 },
                 {
                     "type": "ERROR_PROVOCATION",
