@@ -510,6 +510,8 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                 f.write(
                                     getData(testData))
                                 f.close()
+                        else:
+                            print("Syntax error with the dataset!")
                                 
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
