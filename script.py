@@ -666,11 +666,15 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- ERROR----')
                         data = {"title": getID(fileData), "body": error}
                         try:
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "CQDataSet/", error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, "Not executed",
+                            setStatusNotesValue(fileName, error,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -711,11 +715,15 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- FAILED----')
                         data = {"title": getID(fileData), "body": error}
                         try:
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "IVDataSet/", error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, "Not executed",
+                            setStatusNotesValue(fileName, error,
                                             indexFragment, indexTest)
                             
                         except Exception as error:
@@ -759,11 +767,15 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- FAILED----')
                         data = {"title": getID(fileData), "body": error}
                         try:
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "EPDataSet/", error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
+                            setStatusValue(fileName, 'failed',
+                                       indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, "Not executed",
+                            setStatusNotesValue(fileName, error,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
