@@ -674,7 +674,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, error,
+                            setStatusNotesValue(fileName, data,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -712,7 +712,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                    indexFragment, indexTest)
                             
                     except Exception as error:
-                        print('---- FAILED----')
+                        print('---- ERROR----')
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -723,11 +723,11 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, error,
+                            setStatusNotesValue(fileName, data,
                                             indexFragment, indexTest)
                             
                         except Exception as error:
-                            print("Error : "+error)
+                            print("Error : "+ error)
 
                 elif (getTestType(testData) == 'ERROR_PROVOCATION'):
                     try:
@@ -764,7 +764,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                    indexFragment, indexTest)
                             
                     except Exception as error:
-                        print('---- FAILED----')
+                        print('---- ERROR----')
                         data = {"title": getID(fileData), "body": error}
                         try:
                             createTestDocumentation(
@@ -775,7 +775,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, error,
+                            setStatusNotesValue(fileName, data,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
