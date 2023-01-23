@@ -641,7 +641,6 @@ def executeTestCase(fileData, fileName, repoName, token):
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
-                        print(testOutcome)
                         
                         if "PASSED" in testOutcome.decode("utf-8"):
                             print('---- PASSED ----')
@@ -660,20 +659,18 @@ def executeTestCase(fileData, fileName, repoName, token):
                                 testFilePath, "FAILED", testData, "CQDataSet/", error)
                             setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
                             
                     except Exception as error:
-                        print('---- FAILED----')
+                        print('---- ERROR----')
                         data = {"title": getID(fileData), "body": error}
                         try:
-                            createTestDocumentation(
-                                testFilePath, "FAILED", testData, "CQDataSet/", error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
-                                       indexFragment, indexTest)
-                            setStatusNotesValue(fileName, "Executed",
+                            setStatusNotesValue(fileName, "Not executed",
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -688,25 +685,39 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"IVTestCase/"+getID(testData)+".ttl")
-                        print('---- PASSED ----')
-                        createTestDocumentation(
-                            testFilePath, "PASSED", testData, "IVDataSet/")
-                        setCheckValue(fileName, 1,
-                                      indexFragment, indexTest)
-                        setStatusValue(fileName, 'success',
+                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
+                        
+                        if "PASSED" in testOutcome.decode("utf-8"):
+                            print('---- PASSED ----')
+                            createTestDocumentation(
+                                testFilePath, "PASSED", testData, "IVDataSet/")
+                            setCheckValue(fileName, 1,
+                                   indexFragment, indexTest)
+                            setStatusValue(fileName, 'success',
+                                   indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
+                            
+                        elif "FAILED" in testOutcome.decode("utf-8"):
+                            print('---- FAILED----')
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "IVDataSet/", error)
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
+                            
                     except Exception as error:
                         print('---- FAILED----')
                         data = {"title": getID(fileData), "body": error}
                         try:
-                            createTestDocumentation(
-                                testFilePath, "FAILED", testData, "IVDataSet/",  error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
-                                       indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Not executed",
+                                            indexFragment, indexTest)
+                            
                         except Exception as error:
                             print("Error : "+error)
 
@@ -722,25 +733,38 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"EPTestCase/"+getID(testData)+".ttl") #fileData
-                        print('---- PASSED ----')
-                        createTestDocumentation(
-                            testFilePath, "PASSED", testData, "EPDataSet/")
-                        setCheckValue(fileName, 1,
-                                      indexFragment, indexTest)
-                        setStatusValue(fileName, 'success',
+                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
+                        
+                        if "PASSED" in testOutcome.decode("utf-8"):
+                            print('---- PASSED ----')
+                            createTestDocumentation(
+                                testFilePath, "PASSED", testData, "EPDataSet/")
+                            setCheckValue(fileName, 1,
+                                   indexFragment, indexTest)
+                            setStatusValue(fileName, 'success',
+                                   indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
+                            
+                        elif "FAILED" in testOutcome.decode("utf-8"):
+                            print('---- FAILED----')
+                            createTestDocumentation(
+                                testFilePath, "FAILED", testData, "EPDataSet/", error)
+                            setStatusValue(fileName, 'failed',
                                        indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
+                            
                     except Exception as error:
                         print('---- FAILED----')
                         data = {"title": getID(fileData), "body": error}
                         try:
-                            createTestDocumentation(
-                                testFilePath, "FAILED", testData, "EPDataSet/", error)
                             response = issue.post(url, data, headers=headers)
                             print(response)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusValue(fileName, 'failed',
-                                       indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Not executed",
+                                            indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
             else:
