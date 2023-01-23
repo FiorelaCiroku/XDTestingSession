@@ -486,7 +486,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                 print('Test Case and Data Set already Created ')
 
 def createTestDocumentation(testFilePath, result, testData, folderName, error="Error"):
-    print("Result is ", result)
     if result == "PASSED":
         if (getTestType(testData) == 'COMPETENCY_QUESTION'):
             writer = MarkdownTableWriter(
@@ -674,7 +673,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, data,
+                            setStatusNotesValue(fileName, response,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
@@ -723,7 +722,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, data,
+                            setStatusNotesValue(fileName, response,
                                             indexFragment, indexTest)
                             
                         except Exception as error:
@@ -775,7 +774,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                                        indexFragment, indexTest)
                             setCheckValue(
                                 fileName, 0, indexFragment, indexTest)
-                            setStatusNotesValue(fileName, data,
+                            setStatusNotesValue(fileName, response,
                                             indexFragment, indexTest)
                         except Exception as error:
                             print("Error : "+error)
