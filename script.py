@@ -635,22 +635,24 @@ def executeTestCase(fileData, fileName, repoName, token):
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/TestDocumentation/"
+                        
                         print('---- Executing Test ----')
+                        
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
                         testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
-                        print("testOutcome IS ", testOutcome)
+                        print(testOutcome)
                         
                         if "PASSED" in testOutcome:
                             print('---- PASSED ----')
                             createTestDocumentation(
                                 testFilePath, "PASSED", testData, "CQDataSet/")
                             setCheckValue(fileName, 1,
-                                  indexFragment, indexTest)
+                                   indexFragment, indexTest)
                             setStatusValue(fileName, 'success',
                                    indexFragment, indexTest)
-                            #setStatusNotesValue(fileName, "Executed",
-                            #               indexFragment, indexTest)
+                            setStatusNotesValue(fileName, "Executed",
+                                   indexFragment, indexTest)
                         elif "FAILED" in testOutcome:
                             print('---- FAILED----')
                             createTestDocumentation(
