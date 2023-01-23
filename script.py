@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+import subprocess
 from urllib import response
 import requests as issue
 from urllib.request import urlopen
@@ -637,7 +638,7 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- Executing Test ----')
                         os.system(
                             "java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl")
-                        testOutcome = os.popen('java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl').read()
+                        testOutcome = subprocess.check_output("java -jar OWLUnit-0.3.2.jar --test-case "+testFileLink+"CQTestCase/"+getID(testData)+".ttl", shell=True)
                         print("testOutcome IS ", testOutcome)
                         
                         if "CQ Verification test PASSED" == testOutcome:
