@@ -395,7 +395,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                                     getExpectedResultsContent(testData).replace("\n", "") + '\"; \n')
                             f.write(
                                 '\towlunit:testsOntology ns: .\n')
-                            
                             f.close()
                         
                         print(testFilePath+'CQDataSet/'+getID(testData)+'TD.ttl')
@@ -415,7 +414,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                         # validateSPARQL(getQueryContent(testData))
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/InferenceVerificationTest/"
-
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/InferenceVerificationTest/"
                         with open(testFilePath+'/IVTestCase/'+getID(testData)+'.ttl', 'w') as f:
@@ -457,9 +455,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
 
                         testFilePath = "./XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
-                        
-                        print("testFileLink:", testFileLink)
-                        print("testFilePath:", testFilePath)
                         with open(testFilePath+'EPTestCase/'+getID(testData)+'.ttl', 'w') as f:
                             f.write(
                                 '@prefix owlunit: <https://w3id.org/OWLunit/ontology/> .\n')
@@ -479,7 +474,6 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                         with open(testFilePath+'EPDataSet/'+getID(testData)+'TD.ttl', 'w') as f: 
                             f.write(
                                 getData(testData))
-                            print(f.read())
                             f.close()
                     except Exception as error:
                         setStatusValue(fileName, 'warning',
@@ -491,7 +485,7 @@ def createTestCaseAndDataSetFile(fileData, fileName, repoName):
                 print('Test Case and Data Set already Created ')
 
 def createTestDocumentation(testFilePath, result, testData, folderName, error="Error"):
-    print(testData)
+    print("Result is ", result)
     if result == "PASSED":
         if (getTestType(testData) == 'COMPETENCY_QUESTION'):
             writer = MarkdownTableWriter(
@@ -571,7 +565,7 @@ def createTestDocumentation(testFilePath, result, testData, folderName, error="E
                     ["Input test data", str(folderName) +
                         str(getID(testData))+'TD.ttl'],
                     ["Expected result", getExpectedResultsContent(testData)],
-                    ["Actual result", getExpectedResultsContent(testData)],
+                    ["Actual result", error,
                     ["Executed on", date.today()],
                     ["Environment", "GITHUB"],
                     ["Execution result", result],
@@ -646,8 +640,8 @@ def executeTestCase(fileData, fileName, repoName, token):
                         print('---- PASSED ----')
                         createTestDocumentation(
                             testFilePath, "PASSED", testData, "CQDataSet/")
-                        #setCheckValue(fileName, 1,
-                        #          indexFragment, indexTest)
+                        setCheckValue(fileName, 1,
+                                  indexFragment, indexTest)
                         setStatusValue(fileName, 'success',
                                    indexFragment, indexTest)
                             
@@ -699,9 +693,6 @@ def executeTestCase(fileData, fileName, repoName, token):
                             print("Error : "+error)
 
                 elif (getTestType(testData) == 'ERROR_PROVOCATION'):
-
-                    print("ID : "+getID(testData))
-                    print("Data : "+getData(testData))
                     try:
                         testFileLink = "https://raw.githubusercontent.com/"+repoName+"/main/XDTesting/" + fileData['fragments'][indexFragment]['ontologyName'].replace(
                             " ", "") + "/"+fileData['fragments'][indexFragment]['name'].replace(" ", "")+"/ErrorProvocationTest/"
